@@ -1,0 +1,29 @@
+{
+  "name": "node-opnsense",
+  "version": "1.0.0",
+  "description": "Node OPNSense API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dennis14e/node-opnsense.git"
+  },
+  "keywords": [
+    "opnsense",
+    "api"
+  ],
+  "author": "Dennis Neufeld <info@dneufeld.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dennis14e/node-opnsense/issues"
+  },
+  "homepage": "https://github.com/Dennis14e/node-opnsense#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "axios-debug-log": "^0.8.2"
+  }
+}
