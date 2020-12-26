@@ -6,15 +6,15 @@
 ## Example
 
 ```javascript
-const OPNsense = require('./index');
+const OPNsense = require('./src/index');
 
-const client = new OPNsense(
+const client = new OPNsense.Client(
     'https://opnsense.local/',
     'api-key',
     'api-secret'
 );
 
-client.wol_wakeByMAC('AA:BB:CC:00:11:22').then(res => {
+new OPNsense.Wol.WolClient(client).wakeByMAC('AA:BB:CC:00:11:22').then(res => {
     console.log(res);
 });
 ```

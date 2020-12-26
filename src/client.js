@@ -4,7 +4,7 @@ const axios = require('axios');
 const https = require('https');
 const querystring = require('querystring');
 
-class OPNsense {
+class Client {
     constructor (baseURL, key, secret, verify_tls = true) {
         baseURL = baseURL.replace(/\/?$/, '/');
         this._baseURL = baseURL + 'api';
@@ -49,33 +49,6 @@ class OPNsense {
 
         return response;
     }
-
-    async wol_searchHost () {
-        return await this.request('/wol/wol/searchHost');
-    }
-
-    async wol_wakeByUUID (uuid) {
-        return await this.request('/wol/wol/set', 'post', { uuid: uuid });
-    }
-
-    async wol_wakeByMAC (mac) {
-        let uuid = null;
-
-        await this.wol_searchHost().then(res => {
-            if (res.status !== 'success') {
-                return this.response(res.status, res.result);
-            }
-
-            uuid = res.result.rows.find(row => row.mac === mac);
-            uuid = (uuid === undefined) ? null : uuid.uuid;
-        });
-
-        if (uuid === null) {
-            return this.response('error', 'No entry was found with this MAC address.');
-        }
-
-        return await this.wol_wakeByUUID(uuid);
-    }
 }
 
-module.exports = OPNsense;
+module.exports = Client;
