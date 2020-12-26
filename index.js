@@ -3,7 +3,7 @@
 const axios = require('axios');
 const https = require('https');
 
-class OPNSense {
+class OPNsense {
     constructor (baseURL, key, secret, verify_tls = true) {
         baseURL = baseURL.replace(/\/?$/, '/');
         this._baseURL = baseURL + 'api';
@@ -74,4 +74,4 @@ class OPNSense {
     }
 }
 
-module.exports = OPNSense;
+module.exports = OPNsense;
