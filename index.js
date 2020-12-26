@@ -2,6 +2,7 @@
 
 const axios = require('axios');
 const https = require('https');
+const querystring = require('querystring');
 
 class OPNsense {
     constructor (baseURL, key, secret, verify_tls = true) {
@@ -30,11 +31,14 @@ class OPNsense {
         };
     }
 
-    async request (url, method = 'get', data = null) {
+    async request (url, method = 'get', data = {}) {
         const response = this.client({
             url: url,
             method: method,
-            data: data,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            data: querystring.stringify(data),
         })
         .then(res => {
             return this.response('success', res.data);
