@@ -33,23 +33,24 @@ class OPNSense {
         }
     }
 
+    response (status, result) {
+        return {
+            status: status,
+            result: result
+        };
+    }
+
     async request (url, method = 'get', data = null) {
         const response = this.client({
             url: url,
             method: method,
             data: data,
         })
-        .then(response => {
-            return {
-                status: 'success',
-                result: response.data,
-            };
+        .then(res => {
+            return this.response('success', res.data);
         })
-        .catch(error => {
-            return {
-                status: 'error',
-                result: error.message,
-            };
+        .catch(res => {
+            return this.response('error', res.message);
         });
 
         return response;
