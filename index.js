@@ -3,8 +3,6 @@
 const axios = require('axios');
 const https = require('https');
 
-require('axios-debug-log');
-
 class OPNSense {
     constructor (baseURL, key, secret, verify_tls = true) {
         baseURL = baseURL.replace(/\/?$/, '/');
@@ -12,7 +10,6 @@ class OPNSense {
         this._key = key;
         this._secret = secret;
         this._verify_tls = Boolean(verify_tls);
-        this._debug = false;
 
         this.client = axios.create({
             baseURL: this._baseURL,
@@ -24,13 +21,6 @@ class OPNSense {
                 rejectUnauthorized: this._verify_tls,
             }),
         });
-
-        if (this._debug === true) {
-            this.client.interceptors.request.use(config => {
-                console.log(config);
-                return config;
-            });
-        }
     }
 
     response (status, result) {
