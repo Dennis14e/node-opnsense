@@ -60,8 +60,27 @@ class OPNSense {
         return await this.request('/wol/wol/searchHost');
     }
 
-    async wol_set (uuid) {
+    async wol_wakeByUUID (uuid) {
         return await this.request('/wol/wol/set', 'post', { uuid: uuid });
+    }
+
+    async wol_wakeByMAC (mac) {
+        let uuid = null;
+
+        await this.wol_searchHost().then(res => {
+            if (res.status !== 'success') {
+                return this.response(res.status, res.result);
+            }
+
+            uuid = res.result.rows.find(row => row.mac === mac);
+            uuid = (uuid === undefined) ? null : uuid.uuid;
+        });
+
+        if (uuid === null) {
+            return this.response('error', 'No entry was found with this MAC address.');
+        }
+
+        return await this.wol_wakeByUUID(uuid);
     }
 }
 
