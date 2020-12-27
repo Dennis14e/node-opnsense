@@ -4,35 +4,35 @@ const BaseClient = require('../base');
 
 class ServiceClient extends BaseClient {
     async configtest () {
-        return await this.client.request('/acmeclient/service/configtest');
+        return await this.client.get('/acmeclient/service/configtest');
     }
 
     async reconfigure () {
-        return await this.client.request('/acmeclient/service/reconfigure', 'post');
+        return await this.client.post('/acmeclient/service/reconfigure');
     }
 
     async reset () {
-        return await this.client.request('/acmeclient/service/reset');
+        return await this.client.get('/acmeclient/service/reset');
     }
 
     async restart () {
-        return await this.client.request('/acmeclient/service/restart', 'post');
+        return await this.client.post('/acmeclient/service/restart');
     }
 
     async signallcerts () {
-        return await this.client.request('/acmeclient/service/signallcerts');
+        return await this.client.get('/acmeclient/service/signallcerts');
     }
 
     async start () {
-        return await this.client.request('/acmeclient/service/start', 'post');
+        return await this.client.post('/acmeclient/service/start');
     }
 
     async status () {
-        return await this.client.request('/acmeclient/service/status');
+        return await this.client.get('/acmeclient/service/status');
     }
 
     async stop () {
-        return await this.client.request('/acmeclient/service/stop', 'post');
+        return await this.client.post('/acmeclient/service/stop');
     }
 }
 

@@ -49,6 +49,14 @@ class Client {
 
         return response;
     }
+
+    async get (url, data = {}) {
+        return this.request(url, 'get', data);
+    }
+
+    async post (url, data = {}) {
+        return this.request(url, 'post', data);
+    }
 }
 
 module.exports = Client;

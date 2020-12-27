@@ -4,11 +4,11 @@ const BaseClient = require('../base');
 
 class WolClient extends BaseClient {
     async searchHost () {
-        return await this.client.request('/wol/wol/searchHost');
+        return await this.client.get('/wol/wol/searchHost');
     }
 
     async wakeByUUID (uuid) {
-        return await this.client.request('/wol/wol/set', 'post', { uuid: uuid });
+        return await this.client.post('/wol/wol/set', { uuid: uuid });
     }
 
     async wakeByMAC (mac) {

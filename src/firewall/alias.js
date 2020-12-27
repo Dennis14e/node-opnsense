@@ -4,55 +4,55 @@ const BaseClient = require('../base');
 
 class AliasClient extends BaseClient {
     async addItem (item) {
-        return await this.client.request('/firewall/alias/addItem', 'post', { item: item });
+        return await this.client.post('/firewall/alias/addItem', { item: item });
     }
 
     async delItem (uuid) {
-        return await this.client.request('/firewall/alias/delItem/' + uuid, 'post');
+        return await this.client.post('/firewall/alias/delItem/' + uuid);
     }
 
     async export () {
-        return await this.client.request('/firewall/alias/export');
+        return await this.client.get('/firewall/alias/export');
     }
 
     async getAliasUUID (name) {
-        return await this.client.request('/firewall/alias/getAliasUUID', 'get', { name: name });
+        return await this.client.get('/firewall/alias/getAliasUUID', { name: name });
     }
 
     async getGeoIP () {
-        return await this.client.request('/firewall/alias/getGeoIP');
+        return await this.client.get('/firewall/alias/getGeoIP');
     }
 
     async getItem (uuid = '') {
-        return await this.client.request('/firewall/alias/getItem/' + uuid);
+        return await this.client.get('/firewall/alias/getItem/' + uuid);
     }
 
     async import (data) {
-        return await this.client.request('/firewall/alias/import', 'post', { data: data });
+        return await this.client.post('/firewall/alias/import', { data: data });
     }
 
     async listCountries () {
-        return await this.client.request('/firewall/alias/listCountries');
+        return await this.client.get('/firewall/alias/listCountries');
     }
 
     async listNetworkAliases () {
-        return await this.client.request('/firewall/alias/listNetworkAliases');
+        return await this.client.get('/firewall/alias/listNetworkAliases');
     }
 
     async reconfigure () {
-        return await this.client.request('/firewall/alias/reconfigure', 'post');
+        return await this.client.post('/firewall/alias/reconfigure');
     }
 
     async searchItem (type = '') {
-        return await this.client.request('/firewall/alias/searchItem', 'get', { type: type });
+        return await this.client.get('/firewall/alias/searchItem', { type: type });
     }
 
     async setItem (uuid, alias) {
-        return await this.client.request('/firewall/alias/setItem/' + uuid, 'post', { alias: alias });
+        return await this.client.post('/firewall/alias/setItem/' + uuid, { alias: alias });
     }
 
     async toggleItem (uuid, enabled) {
-        return await this.client.request('/firewall/alias/toggleItem/' + uuid + '/' + enabled, 'post');
+        return await this.client.post('/firewall/alias/toggleItem/' + uuid + '/' + enabled);
     }
 }
 
