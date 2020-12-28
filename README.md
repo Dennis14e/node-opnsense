@@ -2,6 +2,12 @@
 
 ![Lint](https://github.com/Dennis14e/node-opnsense/workflows/Lint/badge.svg)
 
+This Node Client API is mostly based on the documentation [here](https://docs.opnsense.org/development/api.html).
+However, it is known that this documentation is not always up to date.
+
+Not every one of these APIs have been tested. It is possible that e.g. input parameters may be missing.
+
+Use at your own risk.
 
 ## Example
 
