@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint ./src",
+    "jsdoc": "jsdoc -d ./docs -r ./src",
+    "openapi": "swagger-jsdoc ./src -o openapi.json"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,9 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "eslint": "^7.16.0"
+    "jsdoc": "^3.6.6",
+    "swagger-jsdoc": "4.2.0",
+    "eslint": "^7.16.0",
+    "eslint-plugin-jsdoc": "^30.7.9"
   }
 }

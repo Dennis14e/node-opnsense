@@ -1,16 +1,42 @@
 'use strict';
 
+/**
+ * WolClient
+ *
+ * @module OPNsense/Wol/WolClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Wol
+ */
 class WolClient extends BaseClient {
+    /**
+     * Search hosts
+     *
+     * @returns {Promise} Request promise
+     */
     async searchHost () {
-        return await this.client.get('/wol/wol/searchHost');
+        return this.client.get('/wol/wol/searchHost');
     }
 
+    /**
+     * Wake device by UUID
+     *
+     * @param   {string}  uuid UUID of WoL host
+     * @returns {Promise}      Request promise
+     */
     async wakeByUUID (uuid) {
-        return await this.client.post('/wol/wol/set', { uuid: uuid });
+        return this.client.post('/wol/wol/set', { uuid: uuid });
     }
 
+    /**
+     * Wake device by MAC address
+     *
+     * @param   {string}  mac MAC-address of WoL host
+     * @returns {Promise}     Request promise
+     */
     async wakeByMAC (mac) {
         let uuid = null;
 

@@ -1,54 +1,128 @@
 'use strict';
 
+/**
+ * InterfaceClient
+ *
+ * @module OPNsense/Diagnostics/InterfaceClient
+ */
 const BaseClient = require('../base');
 
+/**
+ * Interface
+ */
 class InterfaceClient extends BaseClient {
-    async delRoute () {
-        return await this.client.post('/diagnostics/interface/delRoute');
+    /**
+     * Delete route
+     *
+     * @param   {string}  destination Destination
+     * @param   {string}  gateway     Gateway
+     * @returns {Promise}             Request promise
+     */
+    async delRoute (destination, gateway) {
+        const post_data = {
+            destination: destination,
+            gateway: gateway,
+        };
+        return this.client.post('/diagnostics/interface/delRoute', post_data);
     }
 
+    /**
+     * Flush arp table
+     *
+     * @returns {Promise} Request promise
+     */
     async flushArp () {
-        return await this.client.post('/diagnostics/interface/flushArp');
+        return this.client.post('/diagnostics/interface/flushArp');
     }
 
+    /**
+     * Get arp table
+     *
+     * @returns {Promise} Request promise
+     */
     async getArp () {
-        return await this.client.get('/diagnostics/interface/getArp');
+        return this.client.get('/diagnostics/interface/getArp');
     }
 
+    /**
+     * Get bpf statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getBpfStatistics () {
-        return await this.client.get('/diagnostics/interface/getBpfStatistics');
+        return this.client.get('/diagnostics/interface/getBpfStatistics');
     }
 
+    /**
+     * Get interface names
+     *
+     * @returns {Promise} Request promise
+     */
     async getInterfaceNames () {
-        return await this.client.get('/diagnostics/interface/getInterfaceNames');
+        return this.client.get('/diagnostics/interface/getInterfaceNames');
     }
 
+    /**
+     * Get interface statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getInterfaceStatistics () {
-        return await this.client.get('/diagnostics/interface/getInterfaceStatistics');
+        return this.client.get('/diagnostics/interface/getInterfaceStatistics');
     }
 
+    /**
+     * Get memory statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getMemoryStatistics () {
-        return await this.client.get('/diagnostics/interface/getMemoryStatistics');
+        return this.client.get('/diagnostics/interface/getMemoryStatistics');
     }
 
+    /**
+     * Get ndp table
+     *
+     * @returns {Promise} Request promise
+     */
     async getNdp () {
-        return await this.client.get('/diagnostics/interface/getNdp');
+        return this.client.get('/diagnostics/interface/getNdp');
     }
 
+    /**
+     * Get netisr statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getNetisrStatistics () {
-        return await this.client.get('/diagnostics/interface/getNetisrStatistics');
+        return this.client.get('/diagnostics/interface/getNetisrStatistics');
     }
 
+    /**
+     * Get protocol statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getProtocolStatistics () {
-        return await this.client.get('/diagnostics/interface/getProtocolStatistics');
+        return this.client.get('/diagnostics/interface/getProtocolStatistics');
     }
 
+    /**
+     * Get routes
+     *
+     * @returns {Promise} Request promise
+     */
     async getRoutes () {
-        return await this.client.get('/diagnostics/interface/getRoutes');
+        return this.client.get('/diagnostics/interface/getRoutes');
     }
 
+    /**
+     * Get socket statistics
+     *
+     * @returns {Promise} Request promise
+     */
     async getSocketStatistics () {
-        return await this.client.get('/diagnostics/interface/getSocketStatistics');
+        return this.client.get('/diagnostics/interface/getSocketStatistics');
     }
 }
 
