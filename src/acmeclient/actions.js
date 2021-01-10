@@ -14,7 +14,7 @@ class ActionsClient extends BaseClient {
      *       - application/json
      */
     async add () {
-        return await this.client.post('/acmeclient/actions/add');
+        return this.client.post('/acmeclient/actions/add');
     }
 
     /**
@@ -32,7 +32,7 @@ class ActionsClient extends BaseClient {
      *         required: true
      */
     async del (uuid) {
-        return await this.client.post('/acmeclient/actions/del/' + uuid);
+        return this.client.post('/acmeclient/actions/del/' + uuid);
     }
 
     /**
@@ -50,7 +50,7 @@ class ActionsClient extends BaseClient {
      *         required: true
      */
     async get (uuid = '') {
-        return await this.client.get('/acmeclient/actions/get/' + uuid);
+        return this.client.get('/acmeclient/actions/get/' + uuid);
     }
 
     /**
@@ -64,7 +64,7 @@ class ActionsClient extends BaseClient {
      *       - application/json
      */
     async search () {
-        return await this.client.get('/acmeclient/actions/search');
+        return this.client.get('/acmeclient/actions/search');
     }
 
     /**
@@ -78,7 +78,7 @@ class ActionsClient extends BaseClient {
      *       - application/json
      */
     async sftpGetIdentity () {
-        return await this.client.get('/acmeclient/actions/sftpGetIdentity');
+        return this.client.get('/acmeclient/actions/sftpGetIdentity');
     }
 
     /**
@@ -92,7 +92,7 @@ class ActionsClient extends BaseClient {
      *       - application/json
      */
     async sftpTestConnection () {
-        return await this.client.get('/acmeclient/actions/sftpTestConnection');
+        return this.client.get('/acmeclient/actions/sftpTestConnection');
     }
 
     /**
@@ -113,7 +113,7 @@ class ActionsClient extends BaseClient {
      *         required: false
      */
     async toggle (uuid, enabled = '') {
-        return await this.client.post('/acmeclient/actions/toggle/' + uuid + '/' + enabled);
+        return this.client.post('/acmeclient/actions/toggle/' + uuid + '/' + enabled);
     }
 
     /**
@@ -131,7 +131,7 @@ class ActionsClient extends BaseClient {
      *         required: true
      */
     async update (uuid) {
-        return await this.client.post('/acmeclient/actions/update/' + uuid);
+        return this.client.post('/acmeclient/actions/update/' + uuid);
     }
 }
 

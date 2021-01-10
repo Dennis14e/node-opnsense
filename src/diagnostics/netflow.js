@@ -14,7 +14,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async cacheStats () {
-        return await this.client.get('/diagnostics/netflow/cacheStats');
+        return this.client.get('/diagnostics/netflow/cacheStats');
     }
 
     /**
@@ -28,7 +28,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async getconfig () {
-        return await this.client.get('/diagnostics/netflow/getconfig');
+        return this.client.get('/diagnostics/netflow/getconfig');
     }
 
     /**
@@ -42,7 +42,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async isEnabled () {
-        return await this.client.get('/diagnostics/netflow/isEnabled');
+        return this.client.get('/diagnostics/netflow/isEnabled');
     }
 
     /**
@@ -56,7 +56,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async reconfigure () {
-        return await this.client.get('/diagnostics/netflow/reconfigure');
+        return this.client.get('/diagnostics/netflow/reconfigure');
     }
 
     /**
@@ -70,7 +70,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async setconfig () {
-        return await this.client.get('/diagnostics/netflow/setconfig');
+        return this.client.get('/diagnostics/netflow/setconfig');
     }
 
     /**
@@ -84,7 +84,7 @@ class NetflowClient extends BaseClient {
      *       - application/json
      */
     async status () {
-        return await this.client.get('/diagnostics/netflow/status');
+        return this.client.get('/diagnostics/netflow/status');
     }
 }
 

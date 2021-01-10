@@ -18,7 +18,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async addItem (item) {
-        return await this.client.post('/firewall/alias/addItem', { item: item });
+        return this.client.post('/firewall/alias/addItem', { item: item });
     }
 
     /**
@@ -36,7 +36,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async delItem (uuid) {
-        return await this.client.post('/firewall/alias/delItem/' + uuid);
+        return this.client.post('/firewall/alias/delItem/' + uuid);
     }
 
     /**
@@ -50,7 +50,7 @@ class AliasClient extends BaseClient {
      *       - application/json
      */
     async export () {
-        return await this.client.get('/firewall/alias/export');
+        return this.client.get('/firewall/alias/export');
     }
 
     /**
@@ -68,7 +68,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async getAliasUUID (name) {
-        return await this.client.get('/firewall/alias/getAliasUUID', { name: name });
+        return this.client.get('/firewall/alias/getAliasUUID', { name: name });
     }
 
     /**
@@ -82,7 +82,7 @@ class AliasClient extends BaseClient {
      *       - application/json
      */
     async getGeoIP () {
-        return await this.client.get('/firewall/alias/getGeoIP');
+        return this.client.get('/firewall/alias/getGeoIP');
     }
 
     /**
@@ -100,7 +100,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async getItem (uuid = '') {
-        return await this.client.get('/firewall/alias/getItem/' + uuid);
+        return this.client.get('/firewall/alias/getItem/' + uuid);
     }
 
     /**
@@ -118,7 +118,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async import (data) {
-        return await this.client.post('/firewall/alias/import', { data: data });
+        return this.client.post('/firewall/alias/import', { data: data });
     }
 
     /**
@@ -132,7 +132,7 @@ class AliasClient extends BaseClient {
      *       - application/json
      */
     async listCountries () {
-        return await this.client.get('/firewall/alias/listCountries');
+        return this.client.get('/firewall/alias/listCountries');
     }
 
     /**
@@ -146,7 +146,7 @@ class AliasClient extends BaseClient {
      *       - application/json
      */
     async listNetworkAliases () {
-        return await this.client.get('/firewall/alias/listNetworkAliases');
+        return this.client.get('/firewall/alias/listNetworkAliases');
     }
 
     /**
@@ -160,7 +160,7 @@ class AliasClient extends BaseClient {
      *       - application/json
      */
     async reconfigure () {
-        return await this.client.post('/firewall/alias/reconfigure');
+        return this.client.post('/firewall/alias/reconfigure');
     }
 
     /**
@@ -178,7 +178,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async searchItem (type = '') {
-        return await this.client.get('/firewall/alias/searchItem', { type: type });
+        return this.client.get('/firewall/alias/searchItem', { type: type });
     }
 
     /**
@@ -199,7 +199,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async setItem (uuid, alias) {
-        return await this.client.post('/firewall/alias/setItem/' + uuid, { alias: alias });
+        return this.client.post('/firewall/alias/setItem/' + uuid, { alias: alias });
     }
 
     /**
@@ -220,7 +220,7 @@ class AliasClient extends BaseClient {
      *         required: true
      */
     async toggleItem (uuid, enabled) {
-        return await this.client.post('/firewall/alias/toggleItem/' + uuid + '/' + enabled);
+        return this.client.post('/firewall/alias/toggleItem/' + uuid + '/' + enabled);
     }
 }
 

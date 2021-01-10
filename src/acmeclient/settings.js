@@ -14,7 +14,7 @@ class SettingsClient extends BaseClient {
      *       - application/json
      */
     async fetchCronIntegration () {
-        return await this.client.post('/acmeclient/settings/fetchCronIntegration');
+        return this.client.post('/acmeclient/settings/fetchCronIntegration');
     }
 
     /**
@@ -28,7 +28,7 @@ class SettingsClient extends BaseClient {
      *       - application/json
      */
     async fetchHAProxyIntegration () {
-        return await this.client.post('/acmeclient/settings/fetchHAProxyIntegration');
+        return this.client.post('/acmeclient/settings/fetchHAProxyIntegration');
     }
 
     /**
@@ -42,7 +42,7 @@ class SettingsClient extends BaseClient {
      *       - application/json
      */
     async getBindPluginStatus () {
-        return await this.client.get('/acmeclient/settings/getBindPluginStatus');
+        return this.client.get('/acmeclient/settings/getBindPluginStatus');
     }
 
     /**
@@ -56,7 +56,7 @@ class SettingsClient extends BaseClient {
      *       - application/json
      */
     async getGcloudPluginStatus () {
-        return await this.client.get('/acmeclient/settings/getGcloudPluginStatus');
+        return this.client.get('/acmeclient/settings/getGcloudPluginStatus');
     }
 }
 

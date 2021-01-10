@@ -14,7 +14,7 @@ class AccountsClient extends BaseClient {
      *       - application/json
      */
     async add () {
-        return await this.client.post('/acmeclient/accounts/add');
+        return this.client.post('/acmeclient/accounts/add');
     }
 
     /**
@@ -32,7 +32,7 @@ class AccountsClient extends BaseClient {
      *         required: true
      */
     async del (uuid) {
-        return await this.client.post('/acmeclient/accounts/del/' + uuid);
+        return this.client.post('/acmeclient/accounts/del/' + uuid);
     }
 
     /**
@@ -50,7 +50,7 @@ class AccountsClient extends BaseClient {
      *         required: false
      */
     async get (uuid = '') {
-        return await this.client.get('/acmeclient/accounts/get/' + uuid);
+        return this.client.get('/acmeclient/accounts/get/' + uuid);
     }
 
     /**
@@ -64,7 +64,7 @@ class AccountsClient extends BaseClient {
      *       - application/json
      */
     async search () {
-        return await this.client.get('/acmeclient/accounts/search');
+        return this.client.get('/acmeclient/accounts/search');
     }
 
     /**
@@ -85,7 +85,7 @@ class AccountsClient extends BaseClient {
      *         required: false
      */
     async toggle (uuid, enabled = '') {
-        return await this.client.post('/acmeclient/accounts/toggle/' + uuid + '/' + enabled);
+        return this.client.post('/acmeclient/accounts/toggle/' + uuid + '/' + enabled);
     }
 
     /**
@@ -103,7 +103,7 @@ class AccountsClient extends BaseClient {
      *         required: true
      */
     async update (uuid) {
-        return await this.client.post('/acmeclient/accounts/update/' + uuid);
+        return this.client.post('/acmeclient/accounts/update/' + uuid);
     }
 }
 

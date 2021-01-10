@@ -14,7 +14,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async configtest () {
-        return await this.client.get('/acmeclient/service/configtest');
+        return this.client.get('/acmeclient/service/configtest');
     }
 
     /**
@@ -28,7 +28,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async reconfigure () {
-        return await this.client.post('/acmeclient/service/reconfigure');
+        return this.client.post('/acmeclient/service/reconfigure');
     }
 
     /**
@@ -42,7 +42,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async reset () {
-        return await this.client.get('/acmeclient/service/reset');
+        return this.client.get('/acmeclient/service/reset');
     }
 
     /**
@@ -56,7 +56,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async restart () {
-        return await this.client.post('/acmeclient/service/restart');
+        return this.client.post('/acmeclient/service/restart');
     }
 
     /**
@@ -70,7 +70,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async signallcerts () {
-        return await this.client.get('/acmeclient/service/signallcerts');
+        return this.client.get('/acmeclient/service/signallcerts');
     }
 
     /**
@@ -84,7 +84,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async start () {
-        return await this.client.post('/acmeclient/service/start');
+        return this.client.post('/acmeclient/service/start');
     }
 
     /**
@@ -98,7 +98,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async status () {
-        return await this.client.get('/acmeclient/service/status');
+        return this.client.get('/acmeclient/service/status');
     }
 
     /**
@@ -112,7 +112,7 @@ class ServiceClient extends BaseClient {
      *       - application/json
      */
     async stop () {
-        return await this.client.post('/acmeclient/service/stop');
+        return this.client.post('/acmeclient/service/stop');
     }
 }
 

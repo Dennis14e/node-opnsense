@@ -14,7 +14,7 @@ class CertficatesClient extends BaseClient {
      *       - application/json
      */
     async add () {
-        return await this.client.post('/acmeclient/certificates/add');
+        return this.client.post('/acmeclient/certificates/add');
     }
 
     /**
@@ -32,7 +32,7 @@ class CertficatesClient extends BaseClient {
      *         required: true
      */
     async del (uuid) {
-        return await this.client.post('/acmeclient/certificates/del/' + uuid);
+        return this.client.post('/acmeclient/certificates/del/' + uuid);
     }
 
     /**
@@ -50,7 +50,7 @@ class CertficatesClient extends BaseClient {
      *         required: false
      */
     async get (uuid = '') {
-        return await this.client.get('/acmeclient/certificates/get/' + uuid);
+        return this.client.get('/acmeclient/certificates/get/' + uuid);
     }
 
     /**
@@ -68,7 +68,7 @@ class CertficatesClient extends BaseClient {
      *         required: true
      */
     async removekey (uuid) {
-        return await this.client.get('/acmeclient/certificates/removekey/' + uuid);
+        return this.client.get('/acmeclient/certificates/removekey/' + uuid);
     }
 
     /**
@@ -86,7 +86,7 @@ class CertficatesClient extends BaseClient {
      *         required: true
      */
     async revoke (uuid) {
-        return await this.client.post('/acmeclient/certificates/revoke/' + uuid);
+        return this.client.post('/acmeclient/certificates/revoke/' + uuid);
     }
 
     /**
@@ -100,7 +100,7 @@ class CertficatesClient extends BaseClient {
      *       - application/json
      */
     async search () {
-        return await this.client.get('/acmeclient/certificates/search');
+        return this.client.get('/acmeclient/certificates/search');
     }
 
     /**
@@ -118,7 +118,7 @@ class CertficatesClient extends BaseClient {
      *         required: true
      */
     async sign (uuid) {
-        return await this.client.post('/acmeclient/certificates/sign/' + uuid);
+        return this.client.post('/acmeclient/certificates/sign/' + uuid);
     }
 
     /**
@@ -139,7 +139,7 @@ class CertficatesClient extends BaseClient {
      *         required: false
      */
     async toggle (uuid, enabled = '') {
-        return await this.client.post('/acmeclient/certificates/toggle/' + uuid + '/' + enabled);
+        return this.client.post('/acmeclient/certificates/toggle/' + uuid + '/' + enabled);
     }
 
     /**
@@ -157,7 +157,7 @@ class CertficatesClient extends BaseClient {
      *         required: true
      */
     async update (uuid) {
-        return await this.client.post('/acmeclient/certificates/update/' + uuid);
+        return this.client.post('/acmeclient/certificates/update/' + uuid);
     }
 }
 

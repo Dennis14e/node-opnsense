@@ -79,7 +79,7 @@ class WolClient extends BaseClient {
             return this.client.response('error', 'No entry was found with this MAC address.');
         }
 
-        return await this.wakeByUUID(uuid);
+        return this.wakeByUUID(uuid);
     }
 }
 

@@ -14,7 +14,7 @@ class SystemhealthClient extends BaseClient {
      *       - application/json
      */
     async getInterfaces () {
-        return await this.client.get('/diagnostics/systemhealth/getInterfaces');
+        return this.client.get('/diagnostics/systemhealth/getInterfaces');
     }
 
     /**
@@ -28,7 +28,7 @@ class SystemhealthClient extends BaseClient {
      *       - application/json
      */
     async getRRDlist () {
-        return await this.client.get('/diagnostics/systemhealth/getRRDlist');
+        return this.client.get('/diagnostics/systemhealth/getRRDlist');
     }
 }
 

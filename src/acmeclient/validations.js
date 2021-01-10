@@ -14,7 +14,7 @@ class ValidationsClient extends BaseClient {
      *       - application/json
      */
     async add () {
-        return await this.client.post('/acmeclient/validations/add');
+        return this.client.post('/acmeclient/validations/add');
     }
 
     /**
@@ -32,7 +32,7 @@ class ValidationsClient extends BaseClient {
      *         required: true
      */
     async del (uuid) {
-        return await this.client.post('/acmeclient/validations/del/' + uuid);
+        return this.client.post('/acmeclient/validations/del/' + uuid);
     }
 
     /**
@@ -50,7 +50,7 @@ class ValidationsClient extends BaseClient {
      *         required: false
      */
     async get (uuid = '') {
-        return await this.client.get('/acmeclient/validations/get/' + uuid);
+        return this.client.get('/acmeclient/validations/get/' + uuid);
     }
 
     /**
@@ -64,7 +64,7 @@ class ValidationsClient extends BaseClient {
      *       - application/json
      */
     async search () {
-        return await this.client.get('/acmeclient/validations/search');
+        return this.client.get('/acmeclient/validations/search');
     }
 
     /**
@@ -85,7 +85,7 @@ class ValidationsClient extends BaseClient {
      *         required: false
      */
     async toggle (uuid, enabled = '') {
-        return await this.client.post('/acmeclient/validations/toggle/' + uuid + '/' + enabled);
+        return this.client.post('/acmeclient/validations/toggle/' + uuid + '/' + enabled);
     }
 
     /**
@@ -103,7 +103,7 @@ class ValidationsClient extends BaseClient {
      *         required: true
      */
     async update (uuid) {
-        return await this.client.post('/acmeclient/validations/update/' + uuid);
+        return this.client.post('/acmeclient/validations/update/' + uuid);
     }
 }
 

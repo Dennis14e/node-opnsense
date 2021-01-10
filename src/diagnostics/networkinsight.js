@@ -14,7 +14,7 @@ class NetflowInsightClient extends BaseClient {
      *       - application/json
      */
     async getInterfaces () {
-        return await this.client.get('/diagnostics/networkinsight/getInterfaces');
+        return this.client.get('/diagnostics/networkinsight/getInterfaces');
     }
 
     /**
@@ -28,7 +28,7 @@ class NetflowInsightClient extends BaseClient {
      *       - application/json
      */
     async getMetadata () {
-        return await this.client.get('/diagnostics/networkinsight/getMetadata');
+        return this.client.get('/diagnostics/networkinsight/getMetadata');
     }
 
     /**
@@ -42,7 +42,7 @@ class NetflowInsightClient extends BaseClient {
      *       - application/json
      */
     async getProtocols () {
-        return await this.client.get('/diagnostics/networkinsight/getProtocols');
+        return this.client.get('/diagnostics/networkinsight/getProtocols');
     }
 
     /**
@@ -56,7 +56,7 @@ class NetflowInsightClient extends BaseClient {
      *       - application/json
      */
     async getServices () {
-        return await this.client.get('/diagnostics/networkinsight/getServices');
+        return this.client.get('/diagnostics/networkinsight/getServices');
     }
 }
 
