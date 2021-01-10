@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src",
     "jsdoc": "jsdoc -d ./docs -r ./src",
-    "openapi": "swagger-jsdoc ./src -o openapi.json"
+    "openapi": "swagger-jsdoc -d ./openapi/specification.js -o ./openapi/openapi.json ./src/**/*.js"
   },
   "repository": {
     "type": "git",
