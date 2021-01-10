@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class SettingsClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /cron/settings/addJob:
+     *   post:
+     *     summary: Add job
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Add job
      *
      * @returns {Promise} Request promise
@@ -21,6 +32,21 @@ class SettingsClient extends BaseClient {
         return this.client.post('/cron/settings/addJob');
     }
 
+    /**
+     * @openapi
+     *
+     * /cron/settings/delJob/{uuid}:
+     *   post:
+     *     summary: Delete job
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: uuid
+     *         required: true
+     */
     /**
      * Delete job
      *
@@ -32,6 +58,21 @@ class SettingsClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /cron/settings/getJob/{uuid}:
+     *   get:
+     *     summary: Get job
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: uuid
+     *         required: true
+     */
+    /**
      * Get job
      *
      * @param   {string}  uuid Job UUID
@@ -42,6 +83,17 @@ class SettingsClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /cron/settings/searchJobs:
+     *   get:
+     *     summary: Search jobs
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Search jobs
      *
      * @returns {Promise} Request promise
@@ -50,6 +102,24 @@ class SettingsClient extends BaseClient {
         return this.client.get('/cron/settings/searchJobs');
     }
 
+    /**
+     * @openapi
+     *
+     * /cron/settings/setJob/{uuid}:
+     *   post:
+     *     summary: Set job
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: uuid
+     *         required: true
+     *       - in: formData
+     *         name: job
+     *         required: true
+     */
     /**
      * Set job
      *
@@ -61,6 +131,24 @@ class SettingsClient extends BaseClient {
         return this.client.post('/cron/settings/setJob/' + uuid, { job: job });
     }
 
+    /**
+     * @openapi
+     *
+     * /cron/settings/toggleJob/{uuid}/{enabled}:
+     *   post:
+     *     summary: Toggle job
+     *     tags:
+     *       - cron/settings
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: uuid
+     *         required: true
+     *       - in: path
+     *         name: enabled
+     *         required: false
+     */
     /**
      * Toggle job
      *

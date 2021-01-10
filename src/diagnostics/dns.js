@@ -13,6 +13,21 @@ const BaseClient = require('../base');
  */
 class DnsClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /diagnostics/dns/reverse_lookup:
+     *   get:
+     *     summary: Reverse lookup
+     *     tags:
+     *       - diagnostics/dns
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: address
+     *         required: true
+     */
+    /**
      * Reverse lookup
      *
      * @param   {string}  address Address

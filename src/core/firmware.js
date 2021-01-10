@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class FirmwareClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /core/firmware/poweroff:
+     *   post:
+     *     summary: Poweroff device
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Poweroff device
      *
      * @returns {Promise} Request promise
@@ -21,6 +32,17 @@ class FirmwareClient extends BaseClient {
         return this.client.post('/core/firmware/poweroff');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/reboot:
+     *   post:
+     *     summary: Reboot device
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
     /**
      * Reboot device
      *
@@ -31,7 +53,18 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
-     * Running status
+     * @openapi
+     *
+     * /core/firmware/running:
+     *   get:
+     *     summary: Get running status
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
+     * Get running status
      *
      * @returns {Promise} Request promise
      */
@@ -39,6 +72,17 @@ class FirmwareClient extends BaseClient {
         return this.client.get('/core/firmware/running');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/getFirmwareConfig:
+     *   get:
+     *     summary: Get firmware config
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get firmware config
      *
@@ -49,7 +93,18 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
-     * get firmware options
+     * @openapi
+     *
+     * /core/firmware/getFirmwareOptions:
+     *   get:
+     *     summary: Get firmware options
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
+     * Get firmware options
      *
      * @returns {Promise} Request promise
      */
@@ -57,6 +112,30 @@ class FirmwareClient extends BaseClient {
         return this.client.get('/core/firmware/getFirmwareOptions');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/setFirmwareConfig:
+     *   post:
+     *     summary: Set firmware config
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: mirror
+     *         required: false
+     *       - in: formData
+     *         name: flavour
+     *         required: false
+     *       - in: formData
+     *         name: type
+     *         required: false
+     *       - in: formData
+     *         name: subscription
+     *         required: false
+     */
     /**
      * Set firmware config
      *
@@ -72,6 +151,17 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/info:
+     *   get:
+     *     summary: Get info
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get info
      *
      * @returns {Promise} Request promise
@@ -80,6 +170,17 @@ class FirmwareClient extends BaseClient {
         return this.client.get('/core/firmware/info');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/status:
+     *   get:
+     *     summary: Get status
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get status
      *
@@ -90,6 +191,17 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/health:
+     *   post:
+     *     summary: Check health
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Check health
      *
      * @returns {Promise} Request promise
@@ -99,7 +211,18 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
-     * Audit
+     * @openapi
+     *
+     * /core/firmware/audit:
+     *   post:
+     *     summary: Run audit
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
+     * Run audit
      *
      * @returns {Promise} Request promise
      */
@@ -107,6 +230,21 @@ class FirmwareClient extends BaseClient {
         return this.client.post('/core/firmware/audit');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/upgrade:
+     *   post:
+     *     summary: Upgrade firmware
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: upgrade
+     *         required: false
+     */
     /**
      * Upgrade firmware
      *
@@ -119,6 +257,17 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/upgradestatus:
+     *   get:
+     *     summary: Get upgrade status
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get upgrade status
      *
      * @returns {Promise} Request promise
@@ -127,6 +276,21 @@ class FirmwareClient extends BaseClient {
         return this.client.get('/core/firmware/upgradestatus');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/changelog/{version}:
+     *   post:
+     *     summary: Get firmware changelog
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: version
+     *         required: true
+     */
     /**
      * Get firmware changelog
      *
@@ -138,6 +302,21 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/install/{pkg_name}:
+     *   post:
+     *     summary: Install package
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
+    /**
      * Install package
      *
      * @param   {string}  pkg_name Package name
@@ -147,6 +326,21 @@ class FirmwareClient extends BaseClient {
         return this.client.post('/core/firmware/install/' + pkg_name);
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/reinstall/{pkg_name}:
+     *   post:
+     *     summary: Reinstall package
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
     /**
      * Reinstall package
      *
@@ -158,6 +352,21 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/remove/{pkg_name}:
+     *   post:
+     *     summary: Remove package
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
+    /**
      * Remove package
      *
      * @param   {string}  pkg_name Package name
@@ -167,6 +376,21 @@ class FirmwareClient extends BaseClient {
         return this.client.post('/core/firmware/remove/' + pkg_name);
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/lock/{pkg_name}:
+     *   post:
+     *     summary: Lock package
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
     /**
      * Lock package
      *
@@ -178,6 +402,21 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/unlock/{pkg_name}:
+     *   post:
+     *     summary: Unlock package
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
+    /**
      * Unlock package
      *
      * @param   {string}  pkg_name Package name
@@ -188,6 +427,21 @@ class FirmwareClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /core/firmware/details/{pkg_name}:
+     *   post:
+     *     summary: Get package details
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
+    /**
      * Get package details
      *
      * @param   {string}  pkg_name Package name
@@ -197,6 +451,21 @@ class FirmwareClient extends BaseClient {
         return this.client.post('/core/firmware/details/' + pkg_name);
     }
 
+    /**
+     * @openapi
+     *
+     * /core/firmware/license/{pkg_name}:
+     *   post:
+     *     summary: Get package license
+     *     tags:
+     *       - core/firmware
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: path
+     *         name: pkg_name
+     *         required: true
+     */
     /**
      * Get package license
      *

@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class ActivityClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /diagnostics/activity/getActivity:
+     *   get:
+     *     summary: Get activity
+     *     tags:
+     *       - diagnostics/activity
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get activity
      *
      * @returns {Promise} Request promise

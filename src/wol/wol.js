@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class WolClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /wol/wol/searchHost:
+     *   get:
+     *     summary: Search hosts
+     *     tags:
+     *       - wol/wol
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Search hosts
      *
      * @returns {Promise} Request promise
@@ -21,6 +32,21 @@ class WolClient extends BaseClient {
         return this.client.get('/wol/wol/searchHost');
     }
 
+    /**
+     * @openapi
+     *
+     * /wol/wol/set:
+     *   post:
+     *     summary: Wake device by UUID
+     *     tags:
+     *       - wol/wol
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - name: uuid
+     *         in: formData
+     *         required: true
+     */
     /**
      * Wake device by UUID
      *

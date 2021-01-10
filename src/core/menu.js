@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class MenuClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /core/menu/search:
+     *   get:
+     *     summary: Search menu
+     *     tags:
+     *       - core/menu
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Search menu
      *
      * @returns {Promise} Request promise
@@ -21,6 +32,17 @@ class MenuClient extends BaseClient {
         return this.client.get('/core/menu/search');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/menu/tree:
+     *   get:
+     *     summary: Menu tree
+     *     tags:
+     *       - core/menu
+     *     produces:
+     *       - application/json
+     */
     /**
      * Menu tree
      *

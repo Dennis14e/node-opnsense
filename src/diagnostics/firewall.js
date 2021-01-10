@@ -13,6 +13,24 @@ const BaseClient = require('../base');
  */
 class FirewallClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /diagnostics/firewall/log:
+     *   get:
+     *     summary: Get log
+     *     tags:
+     *       - diagnostics/firewall
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: limit
+     *         required: false
+     *       - in: formData
+     *         name: digest
+     *         required: false
+     */
+    /**
      * Get log
      *
      * @param   {number|null} limit  Limit
@@ -29,6 +47,17 @@ class FirewallClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/firewall/log_filters:
+     *   get:
+     *     summary: Get log filters
+     *     tags:
+     *       - diagnostics/firewall
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get log filters
      *
      * @returns {Promise} Request promise
@@ -37,6 +66,24 @@ class FirewallClient extends BaseClient {
         return this.client.get('/diagnostics/firewall/log_filters');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/firewall/stats:
+     *   get:
+     *     summary: Get stats
+     *     tags:
+     *       - diagnostics/firewall
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: limit
+     *         required: false
+     *       - in: formData
+     *         name: group_by
+     *         required: false
+     */
     /**
      * Get stats
      *

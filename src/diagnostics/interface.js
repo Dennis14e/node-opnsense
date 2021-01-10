@@ -12,6 +12,24 @@ const BaseClient = require('../base');
  */
 class InterfaceClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/delRoute:
+     *   post:
+     *     summary: Delete route
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     *     parameters:
+     *       - in: formData
+     *         name: destination
+     *         required: true
+     *       - in: formData
+     *         name: gateway
+     *         required: true
+     */
+    /**
      * Delete route
      *
      * @param   {string}  destination Destination
@@ -27,6 +45,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/flushArp:
+     *   post:
+     *     summary: Flush arp table
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Flush arp table
      *
      * @returns {Promise} Request promise
@@ -35,6 +64,17 @@ class InterfaceClient extends BaseClient {
         return this.client.post('/diagnostics/interface/flushArp');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/interface/getArp:
+     *   get:
+     *     summary: Get arp table
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get arp table
      *
@@ -45,6 +85,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/getBpfStatistics:
+     *   get:
+     *     summary: Get bpf statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get bpf statistics
      *
      * @returns {Promise} Request promise
@@ -53,6 +104,17 @@ class InterfaceClient extends BaseClient {
         return this.client.get('/diagnostics/interface/getBpfStatistics');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/interface/getInterfaceNames:
+     *   get:
+     *     summary: Get interface names
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get interface names
      *
@@ -63,6 +125,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/getInterfaceStatistics:
+     *   get:
+     *     summary: Get interface statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get interface statistics
      *
      * @returns {Promise} Request promise
@@ -71,6 +144,17 @@ class InterfaceClient extends BaseClient {
         return this.client.get('/diagnostics/interface/getInterfaceStatistics');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/interface/getMemoryStatistics:
+     *   get:
+     *     summary: Get memory statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get memory statistics
      *
@@ -81,6 +165,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/getNdp:
+     *   get:
+     *     summary: Get ndp table
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get ndp table
      *
      * @returns {Promise} Request promise
@@ -89,6 +184,17 @@ class InterfaceClient extends BaseClient {
         return this.client.get('/diagnostics/interface/getNdp');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/interface/getNetisrStatistics:
+     *   get:
+     *     summary: Get netisr statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get netisr statistics
      *
@@ -99,6 +205,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/getProtocolStatistics:
+     *   get:
+     *     summary: Get protocol statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get protocol statistics
      *
      * @returns {Promise} Request promise
@@ -108,6 +225,17 @@ class InterfaceClient extends BaseClient {
     }
 
     /**
+     * @openapi
+     *
+     * /diagnostics/interface/getRoutes:
+     *   get:
+     *     summary: Get routes
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Get routes
      *
      * @returns {Promise} Request promise
@@ -116,6 +244,17 @@ class InterfaceClient extends BaseClient {
         return this.client.get('/diagnostics/interface/getRoutes');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/interface/getSocketStatistics:
+     *   get:
+     *     summary: Get socket statistics
+     *     tags:
+     *       - diagnostics/interface
+     *     produces:
+     *       - application/json
+     */
     /**
      * Get socket statistics
      *

@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class ServiceClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /cron/service/reconfigure:
+     *   post:
+     *     summary: Reconfigure service
+     *     tags:
+     *       - cron/service
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Reconfigure service
      *
      * @returns {Promise} Request promise

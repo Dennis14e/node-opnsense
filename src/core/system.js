@@ -13,6 +13,17 @@ const BaseClient = require('../base');
  */
 class SystemClient extends BaseClient {
     /**
+     * @openapi
+     *
+     * /core/system/halt:
+     *   get:
+     *     summary: Halt system
+     *     tags:
+     *       - core/system
+     *     produces:
+     *       - application/json
+     */
+    /**
      * Halt system
      *
      * @returns {Promise} Request promise
@@ -21,6 +32,17 @@ class SystemClient extends BaseClient {
         return this.client.get('/core/system/halt');
     }
 
+    /**
+     * @openapi
+     *
+     * /core/system/reboot:
+     *   get:
+     *     summary: Reboot system
+     *     tags:
+     *       - core/system
+     *     produces:
+     *       - application/json
+     */
     /**
      * Reboot system
      *
