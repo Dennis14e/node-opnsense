@@ -8,10 +8,16 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/add:
      *   post:
+     *     summary: Add action
      *     tags:
      *       - acmeclient/actions
      *     produces:
      *       - application/json
+     */
+    /**
+     * Add action
+     *
+     * @returns {Promise} Request promise
      */
     async add () {
         return this.client.post('/acmeclient/actions/add');
@@ -22,6 +28,7 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/del/{uuid}:
      *   post:
+     *     summary: Delete action
      *     tags:
      *       - acmeclient/actions
      *     produces:
@@ -30,6 +37,12 @@ class ActionsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: true
+     */
+    /**
+     * Delete action
+     *
+     * @param   {string}  uuid Action UUID
+     * @returns {Promise}      Request promise
      */
     async del (uuid) {
         return this.client.post('/acmeclient/actions/del/' + uuid);
@@ -40,6 +53,7 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/get/{uuid}:
      *   get:
+     *     summary: Get action
      *     tags:
      *       - acmeclient/actions
      *     produces:
@@ -48,6 +62,12 @@ class ActionsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: true
+     */
+    /**
+     * Get action
+     *
+     * @param   {string}  uuid Action UUID
+     * @returns {Promise}      Request promise
      */
     async get (uuid = '') {
         return this.client.get('/acmeclient/actions/get/' + uuid);
@@ -58,10 +78,16 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/search:
      *   get:
+     *     summary: Search actions
      *     tags:
      *       - acmeclient/actions
      *     produces:
      *       - application/json
+     */
+    /**
+     * Search actions
+     *
+     * @returns {Promise} Request promise
      */
     async search () {
         return this.client.get('/acmeclient/actions/search');
@@ -72,10 +98,16 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/sftpGetIdentity:
      *   get:
+     *     summary: Get SFTP identity
      *     tags:
      *       - acmeclient/actions
      *     produces:
      *       - application/json
+     */
+    /**
+     * Get SFTP identity
+     *
+     * @returns {Promise} Request promise
      */
     async sftpGetIdentity () {
         return this.client.get('/acmeclient/actions/sftpGetIdentity');
@@ -86,10 +118,16 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/sftpTestConnection:
      *   get:
+     *     summary: Test SFTP connection
      *     tags:
      *       - acmeclient/actions
      *     produces:
      *       - application/json
+     */
+    /**
+     * Test SFTP connection
+     *
+     * @returns {Promise} Request promise
      */
     async sftpTestConnection () {
         return this.client.get('/acmeclient/actions/sftpTestConnection');
@@ -100,6 +138,7 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/toggle/{uuid}/{enabled}:
      *   post:
+     *     summary: Toggle action
      *     tags:
      *       - acmeclient/actions
      *     produces:
@@ -112,7 +151,15 @@ class ActionsClient extends BaseClient {
      *         name: enabled
      *         required: false
      */
-    async toggle (uuid, enabled = '') {
+    /**
+     * Toggle action
+     *
+     * @param   {string}       uuid    Action UUID
+     * @param   {boolean|null} enabled Enabled
+     * @returns {Promise}              Request promise
+     */
+    async toggle (uuid, enabled = null) {
+        enabled = (enabled === null) ? '' : Number(Boolean(enabled));
         return this.client.post('/acmeclient/actions/toggle/' + uuid + '/' + enabled);
     }
 
@@ -121,6 +168,7 @@ class ActionsClient extends BaseClient {
      *
      * /acmeclient/actions/update/{uuid}:
      *   post:
+     *     summary: Update action
      *     tags:
      *       - acmeclient/actions
      *     produces:
@@ -129,6 +177,12 @@ class ActionsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: true
+     */
+    /**
+     * Update action
+     *
+     * @param   {string}  uuid Action UUID
+     * @returns {Promise}      Request promise
      */
     async update (uuid) {
         return this.client.post('/acmeclient/actions/update/' + uuid);
