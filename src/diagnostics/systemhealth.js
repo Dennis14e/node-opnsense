@@ -8,10 +8,16 @@ class SystemhealthClient extends BaseClient {
      *
      * /diagnostics/systemhealth/getInterfaces:
      *   get:
+     *     summary: Get interfaces
      *     tags:
      *       - diagnostics/systemhealth
      *     produces:
      *       - application/json
+     */
+    /**
+     * Get interfaces
+     *
+     * @returns {Promise} Request promise
      */
     async getInterfaces () {
         return this.client.get('/diagnostics/systemhealth/getInterfaces');
@@ -22,10 +28,16 @@ class SystemhealthClient extends BaseClient {
      *
      * /diagnostics/systemhealth/getRRDlist:
      *   get:
+     *     summary: Get RRD list
      *     tags:
      *       - diagnostics/systemhealth
      *     produces:
      *       - application/json
+     */
+    /**
+     * Get RRD list
+     *
+     * @returns {Promise} Request promise
      */
     async getRRDlist () {
         return this.client.get('/diagnostics/systemhealth/getRRDlist');
