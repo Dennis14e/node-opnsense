@@ -20,15 +20,22 @@ class FirewallClient extends BaseClient {
      *     summary: Get log
      *     tags:
      *       - diagnostics/firewall
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: limit
-     *         required: false
-     *       - in: formData
-     *         name: digest
-     *         required: false
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               limit:
+     *                 type: integer
+     *               digest:
+     *                 type: string
      */
     /**
      * Get log
@@ -54,8 +61,12 @@ class FirewallClient extends BaseClient {
      *     summary: Get log filters
      *     tags:
      *       - diagnostics/firewall
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get log filters
@@ -74,15 +85,22 @@ class FirewallClient extends BaseClient {
      *     summary: Get stats
      *     tags:
      *       - diagnostics/firewall
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: limit
-     *         required: false
-     *       - in: formData
-     *         name: group_by
-     *         required: false
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               limit:
+     *                 type: integer
+     *               group_by:
+     *                 type: string
      */
     /**
      * Get stats

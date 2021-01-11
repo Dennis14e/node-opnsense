@@ -11,8 +11,12 @@ class NetflowClient extends BaseClient {
      *     summary: Get cache stats
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get cache stats
@@ -31,8 +35,12 @@ class NetflowClient extends BaseClient {
      *     summary: Get config
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get config
@@ -51,8 +59,12 @@ class NetflowClient extends BaseClient {
      *     summary: Check enabled
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Check enabled
@@ -71,8 +83,12 @@ class NetflowClient extends BaseClient {
      *     summary: Reconfigure
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reconfigure
@@ -91,8 +107,12 @@ class NetflowClient extends BaseClient {
      *     summary: Set config
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Set config
@@ -111,8 +131,12 @@ class NetflowClient extends BaseClient {
      *     summary: Get status
      *     tags:
      *       - diagnostics/netflow
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get status

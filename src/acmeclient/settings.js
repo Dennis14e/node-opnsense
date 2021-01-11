@@ -11,8 +11,12 @@ class SettingsClient extends BaseClient {
      *     summary: Fetch Cron integration
      *     tags:
      *       - acmeclient/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Fetch Cron integration
@@ -31,8 +35,12 @@ class SettingsClient extends BaseClient {
      *     summary: Fetch HAProxy integration
      *     tags:
      *       - acmeclient/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Fetch HAProxy integration
@@ -51,8 +59,12 @@ class SettingsClient extends BaseClient {
      *     summary: Get Bind plugin status
      *     tags:
      *       - acmeclient/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get Bind plugin status
@@ -71,8 +83,12 @@ class SettingsClient extends BaseClient {
      *     summary: Get GCloud plugin status
      *     tags:
      *       - acmeclient/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get GCloud plugin status

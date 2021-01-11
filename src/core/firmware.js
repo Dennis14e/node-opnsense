@@ -20,8 +20,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Poweroff device
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Poweroff device
@@ -40,8 +44,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Reboot device
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reboot device
@@ -60,8 +68,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get running status
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get running status
@@ -80,8 +92,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get firmware config
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get firmware config
@@ -100,8 +116,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get firmware options
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get firmware options
@@ -120,21 +140,26 @@ class FirmwareClient extends BaseClient {
      *     summary: Set firmware config
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: mirror
-     *         required: false
-     *       - in: formData
-     *         name: flavour
-     *         required: false
-     *       - in: formData
-     *         name: type
-     *         required: false
-     *       - in: formData
-     *         name: subscription
-     *         required: false
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               mirror:
+     *                 type: string
+     *               flavour:
+     *                 type: string
+     *               type:
+     *                 type: string
+     *               subscription:
+     *                 type: string
      */
     /**
      * Set firmware config
@@ -158,8 +183,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get info
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get info
@@ -178,8 +207,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get status
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get status
@@ -198,8 +231,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Check health
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Check health
@@ -218,8 +255,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Run audit
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Run audit
@@ -238,12 +279,20 @@ class FirmwareClient extends BaseClient {
      *     summary: Upgrade firmware
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: upgrade
-     *         required: false
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               upgrade:
+     *                 type: string
      */
     /**
      * Upgrade firmware
@@ -264,8 +313,12 @@ class FirmwareClient extends BaseClient {
      *     summary: Get upgrade status
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get upgrade status
@@ -284,11 +337,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Get firmware changelog
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: version
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -309,11 +368,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Install package
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -334,11 +399,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Reinstall package
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -359,11 +430,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Remove package
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -384,11 +461,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Lock package
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -409,11 +492,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Unlock package
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -434,11 +523,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Get package details
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -459,11 +554,17 @@ class FirmwareClient extends BaseClient {
      *     summary: Get package license
      *     tags:
      *       - core/firmware
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: pkg_name
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**

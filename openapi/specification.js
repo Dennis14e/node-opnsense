@@ -7,5 +7,9 @@ module.exports = {
         version: packageJson.version,
         description: 'OPNsense API',
     },
-    basePath: '/api/',
+    servers: [
+        {
+            url: '/api/',
+        },
+    ],
 };

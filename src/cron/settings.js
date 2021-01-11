@@ -20,8 +20,12 @@ class SettingsClient extends BaseClient {
      *     summary: Add job
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Add job
@@ -40,11 +44,17 @@ class SettingsClient extends BaseClient {
      *     summary: Delete job
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -65,11 +75,17 @@ class SettingsClient extends BaseClient {
      *     summary: Get job
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -90,8 +106,12 @@ class SettingsClient extends BaseClient {
      *     summary: Search jobs
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search jobs
@@ -110,15 +130,28 @@ class SettingsClient extends BaseClient {
      *     summary: Set job
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
-     *       - in: formData
-     *         name: job
-     *         required: true
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               job:
+     *                 type: string
+     *             required:
+     *               - job
      */
     /**
      * Set job
@@ -139,15 +172,22 @@ class SettingsClient extends BaseClient {
      *     summary: Toggle job
      *     tags:
      *       - cron/settings
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle job

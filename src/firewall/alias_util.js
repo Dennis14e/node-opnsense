@@ -11,15 +11,28 @@ class AliasUtilClient extends BaseClient {
      *     summary: Add alias
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: alias
+     *         schema:
+     *           type: string
      *         required: true
-     *       - in: formData
-     *         name: address
-     *         required: true
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               address:
+     *                 type: string
+     *             required:
+     *               - address
      */
     /**
      * Add alias
@@ -40,8 +53,12 @@ class AliasUtilClient extends BaseClient {
      *     summary: Get aliases
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get aliases
@@ -60,15 +77,28 @@ class AliasUtilClient extends BaseClient {
      *     summary: Delete alias
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: alias
+     *         schema:
+     *           type: string
      *         required: true
-     *       - in: formData
-     *         name: address
-     *         required: true
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               address:
+     *                 type: string
+     *             required:
+     *               - address
      */
     /**
      * Delete alias
@@ -89,12 +119,20 @@ class AliasUtilClient extends BaseClient {
      *     summary: Find references
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: ip
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               ip:
+     *                 type: string
      */
     /**
      * Find references
@@ -114,11 +152,17 @@ class AliasUtilClient extends BaseClient {
      *     summary: Flush alias
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: alias
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -139,11 +183,17 @@ class AliasUtilClient extends BaseClient {
      *     summary: List alias
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: alias
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -164,8 +214,12 @@ class AliasUtilClient extends BaseClient {
      *     summary: Update bogons
      *     tags:
      *       - firewall/alias_util
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Update bogons

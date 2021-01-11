@@ -11,8 +11,12 @@ class NetflowInsightClient extends BaseClient {
      *     summary: Get interfaces
      *     tags:
      *       - diagnostics/networkinsight
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get interfaces
@@ -31,8 +35,12 @@ class NetflowInsightClient extends BaseClient {
      *     summary: Get metadata
      *     tags:
      *       - diagnostics/networkinsight
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get metadata
@@ -51,8 +59,12 @@ class NetflowInsightClient extends BaseClient {
      *     summary: Get protocols
      *     tags:
      *       - diagnostics/networkinsight
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get protocols
@@ -71,8 +83,12 @@ class NetflowInsightClient extends BaseClient {
      *     summary: Get services
      *     tags:
      *       - diagnostics/networkinsight
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get services

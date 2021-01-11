@@ -20,8 +20,12 @@ class WolClient extends BaseClient {
      *     summary: Search hosts
      *     tags:
      *       - wol/wol
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search hosts
@@ -40,12 +44,22 @@ class WolClient extends BaseClient {
      *     summary: Wake device by UUID
      *     tags:
      *       - wol/wol
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - name: uuid
-     *         in: formData
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               uuid:
+     *                 type: string
+     *             required:
+     *               - uuid
      */
     /**
      * Wake device by UUID

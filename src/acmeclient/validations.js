@@ -11,8 +11,12 @@ class ValidationsClient extends BaseClient {
      *     summary: Add validation
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Add validation
@@ -31,11 +35,17 @@ class ValidationsClient extends BaseClient {
      *     summary: Delete validation
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -56,12 +66,17 @@ class ValidationsClient extends BaseClient {
      *     summary: Get validation
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Get validation
@@ -81,8 +96,12 @@ class ValidationsClient extends BaseClient {
      *     summary: Search validations
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search validations
@@ -101,15 +120,22 @@ class ValidationsClient extends BaseClient {
      *     summary: Toggle validation
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle validation
@@ -131,11 +157,17 @@ class ValidationsClient extends BaseClient {
      *     summary: Update validation
      *     tags:
      *       - acmeclient/validations
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**

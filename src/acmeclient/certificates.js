@@ -11,8 +11,12 @@ class CertficatesClient extends BaseClient {
      *     summary: Add certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Add certificate
@@ -31,11 +35,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Delete certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -56,12 +66,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Get certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Get certificate
@@ -81,11 +96,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Remove certificate key
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -106,11 +127,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Revoke certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -131,8 +158,12 @@ class CertficatesClient extends BaseClient {
      *     summary: Search certificates
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search certificates
@@ -151,11 +182,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Sign certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -176,15 +213,22 @@ class CertficatesClient extends BaseClient {
      *     summary: Toggle certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle certificate
@@ -206,11 +250,17 @@ class CertficatesClient extends BaseClient {
      *     summary: Update certificate
      *     tags:
      *       - acmeclient/certificates
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**

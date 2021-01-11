@@ -20,8 +20,12 @@ class MenuClient extends BaseClient {
      *     summary: Search menu
      *     tags:
      *       - core/menu
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search menu
@@ -40,8 +44,12 @@ class MenuClient extends BaseClient {
      *     summary: Menu tree
      *     tags:
      *       - core/menu
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Menu tree

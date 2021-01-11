@@ -20,8 +20,12 @@ class SystemClient extends BaseClient {
      *     summary: Halt system
      *     tags:
      *       - core/system
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Halt system
@@ -40,8 +44,12 @@ class SystemClient extends BaseClient {
      *     summary: Reboot system
      *     tags:
      *       - core/system
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reboot system

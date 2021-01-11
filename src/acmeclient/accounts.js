@@ -11,8 +11,12 @@ class AccountsClient extends BaseClient {
      *     summary: Add account
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Add account
@@ -31,11 +35,17 @@ class AccountsClient extends BaseClient {
      *     summary: Delete account
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -56,12 +66,17 @@ class AccountsClient extends BaseClient {
      *     summary: Get account
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Get account
@@ -81,8 +96,12 @@ class AccountsClient extends BaseClient {
      *     summary: Search accounts
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search accounts
@@ -101,15 +120,22 @@ class AccountsClient extends BaseClient {
      *     summary: Toggle account
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle account
@@ -131,11 +157,17 @@ class AccountsClient extends BaseClient {
      *     summary: Update account
      *     tags:
      *       - acmeclient/accounts
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**

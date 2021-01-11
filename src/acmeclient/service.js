@@ -11,8 +11,12 @@ class ServiceClient extends BaseClient {
      *     summary: Test config
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Test config
@@ -31,8 +35,12 @@ class ServiceClient extends BaseClient {
      *     summary: Reconfigure service
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reconfigure service
@@ -51,8 +59,12 @@ class ServiceClient extends BaseClient {
      *     summary: Reset service
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reset service
@@ -71,8 +83,12 @@ class ServiceClient extends BaseClient {
      *     summary: Restart service
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Restart service
@@ -91,8 +107,12 @@ class ServiceClient extends BaseClient {
      *     summary: Sign all certificates
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Sign all certificates
@@ -111,8 +131,12 @@ class ServiceClient extends BaseClient {
      *     summary: Start service
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Start service
@@ -131,8 +155,12 @@ class ServiceClient extends BaseClient {
      *     summary: Get status
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get status
@@ -151,8 +179,12 @@ class ServiceClient extends BaseClient {
      *     summary: Stop service
      *     tags:
      *       - acmeclient/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Stop service

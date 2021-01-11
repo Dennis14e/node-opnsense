@@ -20,8 +20,12 @@ class ServiceClient extends BaseClient {
      *     summary: Reconfigure service
      *     tags:
      *       - cron/service
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reconfigure service

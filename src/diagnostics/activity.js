@@ -20,8 +20,12 @@ class ActivityClient extends BaseClient {
      *     summary: Get activity
      *     tags:
      *       - diagnostics/activity
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get activity

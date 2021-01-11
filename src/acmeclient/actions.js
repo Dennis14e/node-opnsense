@@ -11,8 +11,12 @@ class ActionsClient extends BaseClient {
      *     summary: Add action
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Add action
@@ -31,11 +35,17 @@ class ActionsClient extends BaseClient {
      *     summary: Delete action
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -56,11 +66,17 @@ class ActionsClient extends BaseClient {
      *     summary: Get action
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -81,8 +97,12 @@ class ActionsClient extends BaseClient {
      *     summary: Search actions
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Search actions
@@ -101,8 +121,12 @@ class ActionsClient extends BaseClient {
      *     summary: Get SFTP identity
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get SFTP identity
@@ -121,8 +145,12 @@ class ActionsClient extends BaseClient {
      *     summary: Test SFTP connection
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Test SFTP connection
@@ -141,15 +169,22 @@ class ActionsClient extends BaseClient {
      *     summary: Toggle action
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle action
@@ -171,11 +206,17 @@ class ActionsClient extends BaseClient {
      *     summary: Update action
      *     tags:
      *       - acmeclient/actions
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**

@@ -19,15 +19,22 @@ class InterfaceClient extends BaseClient {
      *     summary: Delete route
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: destination
-     *         required: true
-     *       - in: formData
-     *         name: gateway
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               destination:
+     *                 type: string
+     *               gateway:
+     *                 type: string
      */
     /**
      * Delete route
@@ -52,8 +59,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Flush arp table
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Flush arp table
@@ -72,8 +83,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get arp table
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get arp table
@@ -92,8 +107,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get bpf statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get bpf statistics
@@ -112,8 +131,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get interface names
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get interface names
@@ -132,8 +155,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get interface statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get interface statistics
@@ -152,8 +179,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get memory statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get memory statistics
@@ -172,8 +203,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get ndp table
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get ndp table
@@ -192,8 +227,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get netisr statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get netisr statistics
@@ -212,8 +251,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get protocol statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get protocol statistics
@@ -232,8 +275,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get routes
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get routes
@@ -252,8 +299,12 @@ class InterfaceClient extends BaseClient {
      *     summary: Get socket statistics
      *     tags:
      *       - diagnostics/interface
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get socket statistics

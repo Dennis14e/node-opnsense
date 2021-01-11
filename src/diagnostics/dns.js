@@ -20,12 +20,22 @@ class DnsClient extends BaseClient {
      *     summary: Reverse lookup
      *     tags:
      *       - diagnostics/dns
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: address
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               address:
+     *                 type: string
+     *             required:
+     *               - address
      */
     /**
      * Reverse lookup

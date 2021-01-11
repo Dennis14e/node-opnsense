@@ -11,12 +11,20 @@ class AliasClient extends BaseClient {
      *     summary: Add item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: item
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               item:
+     *                 type: string
      */
     /**
      * Add item
@@ -36,11 +44,17 @@ class AliasClient extends BaseClient {
      *     summary: Delete item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -61,8 +75,12 @@ class AliasClient extends BaseClient {
      *     summary: Export aliases
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Export aliases
@@ -81,12 +99,22 @@ class AliasClient extends BaseClient {
      *     summary: Get alias UUID
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: name
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               name:
+     *                 type: string
+     *             required:
+     *               - name
      */
     /**
      * Get alias UUID
@@ -106,8 +134,12 @@ class AliasClient extends BaseClient {
      *     summary: Get Geo IP
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get Geo IP
@@ -126,11 +158,17 @@ class AliasClient extends BaseClient {
      *     summary: Get item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      */
     /**
@@ -151,12 +189,22 @@ class AliasClient extends BaseClient {
      *     summary: Import aliases
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: data
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               data:
+     *                 type: string
+     *             required:
+     *               - data
      */
     /**
      * Import aliases
@@ -176,8 +224,12 @@ class AliasClient extends BaseClient {
      *     summary: List countries
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * List countries
@@ -196,8 +248,12 @@ class AliasClient extends BaseClient {
      *     summary: List network aliases
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * List network aliases
@@ -216,8 +272,12 @@ class AliasClient extends BaseClient {
      *     summary: Reconfigure
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Reconfigure
@@ -236,12 +296,22 @@ class AliasClient extends BaseClient {
      *     summary: Search item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
-     *     parameters:
-     *       - in: formData
-     *         name: type
-     *         required: true
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               type:
+     *                 type: string
+     *             required:
+     *               - type
      */
     /**
      * Search item
@@ -261,15 +331,28 @@ class AliasClient extends BaseClient {
      *     summary: Set item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
-     *       - in: formData
-     *         name: type
-     *         required: true
+     *     requestBody:
+     *       content:
+     *         x-www-form-urlencoded:
+     *           schema:
+     *             type: object
+     *             properties:
+     *               type:
+     *                 type: string
+     *             required:
+     *               - type
      */
     /**
      * Set item
@@ -290,15 +373,22 @@ class AliasClient extends BaseClient {
      *     summary: Toggle item
      *     tags:
      *       - firewall/alias
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      *     parameters:
      *       - in: path
      *         name: uuid
+     *         schema:
+     *           type: string
      *         required: true
      *       - in: path
      *         name: enabled
-     *         required: false
+     *         schema:
+     *           type: string
      */
     /**
      * Toggle item

@@ -11,8 +11,12 @@ class SystemhealthClient extends BaseClient {
      *     summary: Get interfaces
      *     tags:
      *       - diagnostics/systemhealth
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get interfaces
@@ -31,8 +35,12 @@ class SystemhealthClient extends BaseClient {
      *     summary: Get RRD list
      *     tags:
      *       - diagnostics/systemhealth
-     *     produces:
-     *       - application/json
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
      */
     /**
      * Get RRD list
