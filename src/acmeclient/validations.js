@@ -8,10 +8,16 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/add:
      *   post:
+     *     summary: Add validation
      *     tags:
      *       - acmeclient/validations
      *     produces:
      *       - application/json
+     */
+    /**
+     * Add validation
+     *
+     * @returns {Promise} Request promise
      */
     async add () {
         return this.client.post('/acmeclient/validations/add');
@@ -22,6 +28,7 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/get/{uuid}:
      *   post:
+     *     summary: Delete validation
      *     tags:
      *       - acmeclient/validations
      *     produces:
@@ -30,6 +37,12 @@ class ValidationsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: true
+     */
+    /**
+     * Delete validation
+     *
+     * @param   {string}  uuid Validation UUID
+     * @returns {Promise}      Request promise
      */
     async del (uuid) {
         return this.client.post('/acmeclient/validations/del/' + uuid);
@@ -40,6 +53,7 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/get/{uuid}:
      *   post:
+     *     summary: Get validation
      *     tags:
      *       - acmeclient/validations
      *     produces:
@@ -48,6 +62,12 @@ class ValidationsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: false
+     */
+    /**
+     * Get validation
+     *
+     * @param   {string}  uuid Validation UUID
+     * @returns {Promise}      Request promise
      */
     async get (uuid = '') {
         return this.client.get('/acmeclient/validations/get/' + uuid);
@@ -58,10 +78,16 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/search:
      *   get:
+     *     summary: Search validations
      *     tags:
      *       - acmeclient/validations
      *     produces:
      *       - application/json
+     */
+    /**
+     * Search validations
+     *
+     * @returns {Promise} Request promise
      */
     async search () {
         return this.client.get('/acmeclient/validations/search');
@@ -72,6 +98,7 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/toggle/{uuid}/{enabled}:
      *   post:
+     *     summary: Toggle validation
      *     tags:
      *       - acmeclient/validations
      *     produces:
@@ -84,7 +111,15 @@ class ValidationsClient extends BaseClient {
      *         name: enabled
      *         required: false
      */
-    async toggle (uuid, enabled = '') {
+    /**
+     * Toggle validation
+     *
+     * @param   {string}       uuid    Validation UUID
+     * @param   {boolean|null} enabled Enabled
+     * @returns {Promise}              Request promise
+     */
+    async toggle (uuid, enabled = null) {
+        enabled = (enabled === null) ? '' : Number(Boolean(enabled));
         return this.client.post('/acmeclient/validations/toggle/' + uuid + '/' + enabled);
     }
 
@@ -93,6 +128,7 @@ class ValidationsClient extends BaseClient {
      *
      * /acmeclient/validations/update/{uuid}:
      *   post:
+     *     summary: Update validation
      *     tags:
      *       - acmeclient/validations
      *     produces:
@@ -101,6 +137,12 @@ class ValidationsClient extends BaseClient {
      *       - in: path
      *         name: uuid
      *         required: true
+     */
+    /**
+     * Update validation
+     *
+     * @param   {string}  uuid Validation UUID
+     * @returns {Promise}      Request promise
      */
     async update (uuid) {
         return this.client.post('/acmeclient/validations/update/' + uuid);
