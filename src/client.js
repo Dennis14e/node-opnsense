@@ -1,10 +1,27 @@
 'use strict';
 
+/**
+ * OPNsense Client
+ *
+ * @module OPNsense/Client
+ */
+
 const axios = require('axios');
 const https = require('https');
 const querystring = require('querystring');
 
+/**
+ * OPNsense Client
+ */
 class Client {
+    /**
+     * Setup Client class, which is used by every API
+     *
+     * @param {string}  baseURL    OPNsense url
+     * @param {string}  key        OPNsense API key
+     * @param {string}  secret     OPNsense API secret
+     * @param {boolean} verify_tls Check TLS certificates
+     */
     constructor (baseURL, key, secret, verify_tls = true) {
         baseURL = baseURL.replace(/\/?$/, '/');
         this._baseURL = baseURL + 'api';
@@ -24,6 +41,13 @@ class Client {
         });
     }
 
+    /**
+     * Response object
+     *
+     * @param   {string} status Request status ('error', 'success')
+     * @param   {*}      result Request result
+     * @returns {object}        Response object
+     */
     response (status, result) {
         return {
             status: status,
@@ -31,10 +55,40 @@ class Client {
         };
     }
 
-    async request (url, method = 'get', data = {}) {
+    /**
+     * Send GET-request
+     *
+     * @param   {string}  url  Request url
+     * @param   {object}  data Request data
+     * @returns {Promise}      Request promise
+     */
+    async get (url, data = {}) {
         const response = this.client({
             url: url,
-            method: method,
+            method: 'get',
+            params: data,
+        })
+        .then(res => {
+            return this.response('success', res.data);
+        })
+        .catch(res => {
+            return this.response('error', res.message);
+        });
+
+        return response;
+    }
+
+    /**
+     * Send POST-requiest
+     *
+     * @param   {string}  url  Request url
+     * @param   {object}  data Request data
+     * @returns {Promise}      Request promise
+     */
+    async post (url, data = {}) {
+        const response = this.client({
+            url: url,
+            method: 'post',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
@@ -48,14 +102,6 @@ class Client {
         });
 
         return response;
-    }
-
-    async get (url, data = {}) {
-        return this.request(url, 'get', data);
-    }
-
-    async post (url, data = {}) {
-        return this.request(url, 'post', data);
     }
 }
 

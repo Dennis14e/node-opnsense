@@ -3,12 +3,52 @@
 const BaseClient = require('../base');
 
 class SystemhealthClient extends BaseClient {
+    /**
+     * @openapi
+     *
+     * /diagnostics/systemhealth/getInterfaces:
+     *   get:
+     *     summary: Get interfaces
+     *     tags:
+     *       - diagnostics/systemhealth
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     */
+    /**
+     * Get interfaces
+     *
+     * @returns {Promise} Request promise
+     */
     async getInterfaces () {
-        return await this.client.get('/diagnostics/systemhealth/getInterfaces');
+        return this.client.get('/diagnostics/systemhealth/getInterfaces');
     }
 
+    /**
+     * @openapi
+     *
+     * /diagnostics/systemhealth/getRRDlist:
+     *   get:
+     *     summary: Get RRD list
+     *     tags:
+     *       - diagnostics/systemhealth
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     */
+    /**
+     * Get RRD list
+     *
+     * @returns {Promise} Request promise
+     */
     async getRRDlist () {
-        return await this.client.get('/diagnostics/systemhealth/getRRDlist');
+        return this.client.get('/diagnostics/systemhealth/getRRDlist');
     }
 }
 
