@@ -354,7 +354,7 @@ class FirmwareClient extends BaseClient {
      * Get firmware changelog
      *
      * @param   {string}  version OPNsense version
-     * @returns {Promise}        Request promise
+     * @returns {Promise}         Request promise
      */
     async changelog (version) {
         return this.client.post('/core/firmware/changelog/' + version);
@@ -420,6 +420,54 @@ class FirmwareClient extends BaseClient {
      */
     async reinstall (pkg_name) {
         return this.client.post('/core/firmware/reinstall/' + pkg_name);
+    }
+
+    /**
+     * @openapi
+     *
+     * /core/firmware/installConfiguredPlugins:
+     *   post:
+     *     summary: Install missing configured plugins
+     *     tags:
+     *       - core/firmware
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     */
+    /**
+     * Install missing configured plugins
+     *
+     * @returns {Promise} Request promise
+     */
+    async installConfiguredPlugins () {
+        return this.client.post('/core/firmware/installConfiguredPlugins');
+    }
+
+    /**
+     * @openapi
+     *
+     * /core/firmware/acceptConfiguredPlugins:
+     *   post:
+     *     summary: Accept configured plugins
+     *     tags:
+     *       - core/firmware
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         content:
+     *           application/json:
+     *             {}
+     */
+    /**
+     * Accept configured plugins
+     *
+     * @returns {Promise} Request promise
+     */
+    async acceptConfiguredPlugins () {
+        return this.client.post('/core/firmware/acceptConfiguredPlugins');
     }
 
     /**

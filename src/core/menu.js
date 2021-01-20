@@ -26,14 +26,20 @@ class MenuClient extends BaseClient {
      *         content:
      *           application/json:
      *             {}
+     *     parameters:
+     *       - in: query
+     *         name: q
+     *         schema:
+     *           type: string
      */
     /**
      * Search menu
      *
-     * @returns {Promise} Request promise
+     * @param   {string|null} q Search query
+     * @returns {Promise}       Request promise
      */
-    async search () {
-        return this.client.get('/core/menu/search');
+    async search (q = null) {
+        return this.client.get('/core/menu/search', { q: q });
     }
 
     /**
@@ -50,14 +56,20 @@ class MenuClient extends BaseClient {
      *         content:
      *           application/json:
      *             {}
+     *     parameters:
+     *       - in: query
+     *         name: uri
+     *         schema:
+     *           type: string
      */
     /**
      * Menu tree
      *
-     * @returns {Promise} Request promise
+     * @param   {string|null} uri URI
+     * @returns {Promise}         Request promise
      */
-    async tree () {
-        return this.client.get('/core/menu/tree');
+    async tree (uri = null) {
+        return this.client.get('/core/menu/tree', { uri: uri });
     }
 }
 
