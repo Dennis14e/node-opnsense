@@ -24,3 +24,11 @@ new OPNsense.Wol.WolClient(client).wakeByMAC('AA:BB:CC:00:11:22').then(res => {
     console.log(res);
 });
 ```
+
+## NPM scripts
+
+| Command           | Description                                  |
+| ----------------- | -------------------------------------------- |
+| `npm run lint`    | Lint code in ./src                           |
+| `npm run jsdoc`   | Generate documentation ./docs                |
+| `npm run openapi` | Generate OpenAPI file ./openapi/openapi.json |
