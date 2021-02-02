@@ -30,6 +30,6 @@
     "jsdoc": "^3.6.6",
     "swagger-jsdoc": "^6.0.1",
     "eslint": "^7.18.0",
-    "eslint-plugin-jsdoc": "^31.3.2"
+    "eslint-plugin-jsdoc": "^31.6.0"
   }
 }
