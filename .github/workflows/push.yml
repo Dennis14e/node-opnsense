@@ -1,11 +1,46 @@
-name: Lint
+name: Push events
 
 on: push
 
 jobs:
   lint:
-    name: Lint
-    runs-on: ubuntu-latest
+    name: Lint (Node ${{ matrix.node }})
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node: [ 10, 12, 14 ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ matrix.node }}-
+
+      - name: Install node modules
+        run: npm ci
+
+      - name: Run lint
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_name: "Lint Action"
+          git_email: "Dennis14e@users.noreply.github.com"
+          eslint: true
+
+  openapi:
+    name: OpenAPI
+    runs-on: ubuntu-20.04
+    needs: lint
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,14 +60,6 @@ jobs:
 
       - name: Install node modules
         run: npm ci
-
-      - name: Run lint
-        uses: wearerequired/lint-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_name: "Lint Action"
-          git_email: "Dennis14e@users.noreply.github.com"
-          eslint: true
 
       - name: Generate OpenAPI file
         run: npm run openapi
