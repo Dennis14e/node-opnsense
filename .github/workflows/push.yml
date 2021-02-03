@@ -4,11 +4,8 @@ on: push
 
 jobs:
   lint:
-    name: Lint (Node ${{ matrix.node }})
+    name: ESLint
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node: [ 10, 12, 14 ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,21 +13,24 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 12
 
       - name: Cache node modules
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ matrix.node }}-
+            ${{ runner.os }}-node-
 
       - name: Install node modules
         run: npm ci
 
       - name: Run lint
         uses: bradennapier/eslint-plus-action@v3
+        with:
+          issueSummaryOnlyOnEvent: true
+          includeGlob: 'src/**/*'
 
   openapi:
     name: OpenAPI

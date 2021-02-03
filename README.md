@@ -1,6 +1,6 @@
 # Node OPNsense Client API (node-opnsense)
 
-![Lint](https://github.com/Dennis14e/node-opnsense/workflows/Lint/badge.svg)
+![Push events](https://github.com/Dennis14e/node-opnsense/workflows/Push%20events/badge.svg)
 
 This Node Client API is mostly based on the documentation [here](https://docs.opnsense.org/development/api.html) and the source code [here](https://github.com/opnsense/core/tree/master/src/opnsense/mvc/app/controllers/OPNsense).
 However, it is known that the documentation is not always up to date.
