@@ -7,5 +7,6 @@ module.exports = {
     Cron: require('./cron/_index'),
     Diagnostics: require('./diagnostics/_index'),
     Firewall: require('./firewall/_index'),
+    IDS: require('./ids/_index'),
     Wol: require('./wol/_index'),
 };
