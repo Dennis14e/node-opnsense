@@ -30,12 +30,9 @@ jobs:
         run: npm ci
 
       - name: Run lint
-        uses: wearerequired/lint-action@v1
+        uses: reviewdog/action-eslint@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_name: "Lint Action"
-          git_email: "Dennis14e@users.noreply.github.com"
-          eslint: true
+          eslint_flags: 'src/'
 
   openapi:
     name: OpenAPI
