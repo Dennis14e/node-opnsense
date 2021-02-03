@@ -33,3 +33,13 @@ jobs:
           git_name: "Lint Action"
           git_email: "Dennis14e@users.noreply.github.com"
           eslint: true
+
+      - name: Generate OpenAPI file
+        run: npm run openapi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifacts@v2
+        with:
+          name: openapi.json
+          path: openapi/openapi.json
+          if-no-files-found: warn
