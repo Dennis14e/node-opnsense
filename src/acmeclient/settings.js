@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * SettingsClient
+ *
+ * @module OPNsense/Acmeclient/SettingsClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Settings
+ */
 class SettingsClient extends BaseClient {
     /**
      * @openapi

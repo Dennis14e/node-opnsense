@@ -5,6 +5,7 @@
  *
  * @module OPNsense/Diagnostics/InterfaceClient
  */
+
 const BaseClient = require('../base');
 
 /**

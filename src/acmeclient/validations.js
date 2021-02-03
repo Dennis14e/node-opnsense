@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * ValidationsClient
+ *
+ * @module OPNsense/Acmeclient/ValidationsClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Validations
+ */
 class ValidationsClient extends BaseClient {
     /**
      * @openapi

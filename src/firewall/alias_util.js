@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * AliasUtilClient
+ *
+ * @module OPNsense/Firewall/AliasUtilClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * AliasUtil
+ */
 class AliasUtilClient extends BaseClient {
     /**
      * @openapi

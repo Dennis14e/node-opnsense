@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * NetflowInsightClient
+ *
+ * @module OPNsense/Diagnostics/NetflowInsightClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * NetflowInsight
+ */
 class NetflowInsightClient extends BaseClient {
     /**
      * @openapi

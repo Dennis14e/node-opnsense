@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * CertificatesClient
+ *
+ * @module OPNsense/Acmeclient/CertificatesClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Certificates
+ */
 class CertficatesClient extends BaseClient {
     /**
      * @openapi

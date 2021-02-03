@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * SystemhealthClient
+ *
+ * @module OPNsense/Diagnostics/SystemhealthClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Systemhealth
+ */
 class SystemhealthClient extends BaseClient {
     /**
      * @openapi

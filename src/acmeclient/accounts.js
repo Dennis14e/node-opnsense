@@ -1,7 +1,16 @@
 'use strict';
 
+/**
+ * AccountsClient
+ *
+ * @module OPNsense/Acmeclient/AccountsClient
+ */
+
 const BaseClient = require('../base');
 
+/**
+ * Accounts
+ */
 class AccountsClient extends BaseClient {
     /**
      * @openapi
