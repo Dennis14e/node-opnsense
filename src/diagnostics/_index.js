@@ -8,4 +8,5 @@ module.exports = {
     NetflowClient: require('./netflow'),
     NetworkInsightClient: require('./networkinsight'),
     SystemhealthClient: require('./systemhealth'),
+    TrafficClient: require('./traffic'),
 };
