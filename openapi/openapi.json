@@ -1,0 +1,2819 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OPNsense",
+    "version": "0.0.3",
+    "description": "OPNsense API"
+  },
+  "servers": [
+    {
+      "url": "/api/"
+    }
+  ],
+  "paths": {
+    "/acmeclient/accounts/add": {
+      "post": {
+        "summary": "Add account",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/accounts/del/{uuid}": {
+      "post": {
+        "summary": "Delete account",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/accounts/get/{uuid}": {
+      "post": {
+        "summary": "Get account",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/accounts/search": {
+      "get": {
+        "summary": "Search accounts",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/accounts/toggle/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle account",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/accounts/update/{uuid}": {
+      "post": {
+        "summary": "Update account",
+        "tags": [
+          "acmeclient/accounts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/actions/add": {
+      "post": {
+        "summary": "Add action",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/actions/del/{uuid}": {
+      "post": {
+        "summary": "Delete action",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/actions/get/{uuid}": {
+      "get": {
+        "summary": "Get action",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/actions/search": {
+      "get": {
+        "summary": "Search actions",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/actions/sftpGetIdentity": {
+      "get": {
+        "summary": "Get SFTP identity",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/actions/sftpTestConnection": {
+      "get": {
+        "summary": "Test SFTP connection",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/actions/toggle/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle action",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/actions/update/{uuid}": {
+      "post": {
+        "summary": "Update action",
+        "tags": [
+          "acmeclient/actions"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/add": {
+      "post": {
+        "summary": "Add certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/certificates/del/{uuid}": {
+      "post": {
+        "summary": "Delete certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/get/{uuid}": {
+      "get": {
+        "summary": "Get certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/removekey/{uuid}": {
+      "get": {
+        "summary": "Remove certificate key",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/revoke/{uuid}": {
+      "post": {
+        "summary": "Revoke certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/search": {
+      "get": {
+        "summary": "Search certificates",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/certificates/sign/{uuid}": {
+      "post": {
+        "summary": "Sign certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/toggle/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/certificates/update/{uuid}": {
+      "post": {
+        "summary": "Update certificate",
+        "tags": [
+          "acmeclient/certificates"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/service/configtest": {
+      "get": {
+        "summary": "Test config",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/reconfigure": {
+      "post": {
+        "summary": "Reconfigure service",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/reset": {
+      "get": {
+        "summary": "Reset service",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/restart": {
+      "post": {
+        "summary": "Restart service",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/signallcerts": {
+      "get": {
+        "summary": "Sign all certificates",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/start": {
+      "post": {
+        "summary": "Start service",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/status": {
+      "get": {
+        "summary": "Get status",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/service/stop": {
+      "post": {
+        "summary": "Stop service",
+        "tags": [
+          "acmeclient/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/settings/fetchCronIntegration": {
+      "post": {
+        "summary": "Fetch Cron integration",
+        "tags": [
+          "acmeclient/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/settings/fetchHAProxyIntegration": {
+      "post": {
+        "summary": "Fetch HAProxy integration",
+        "tags": [
+          "acmeclient/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/settings/getBindPluginStatus": {
+      "get": {
+        "summary": "Get Bind plugin status",
+        "tags": [
+          "acmeclient/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/settings/getGcloudPluginStatus": {
+      "get": {
+        "summary": "Get GCloud plugin status",
+        "tags": [
+          "acmeclient/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/validations/add": {
+      "post": {
+        "summary": "Add validation",
+        "tags": [
+          "acmeclient/validations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/validations/get/{uuid}": {
+      "post": {
+        "summary": "Get validation",
+        "tags": [
+          "acmeclient/validations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/acmeclient/validations/search": {
+      "get": {
+        "summary": "Search validations",
+        "tags": [
+          "acmeclient/validations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/acmeclient/validations/toggle/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle validation",
+        "tags": [
+          "acmeclient/validations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/acmeclient/validations/update/{uuid}": {
+      "post": {
+        "summary": "Update validation",
+        "tags": [
+          "acmeclient/validations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/poweroff": {
+      "post": {
+        "summary": "Poweroff device",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/reboot": {
+      "post": {
+        "summary": "Reboot device",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/running": {
+      "get": {
+        "summary": "Get running status",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/getFirmwareConfig": {
+      "get": {
+        "summary": "Get firmware config",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/getFirmwareOptions": {
+      "get": {
+        "summary": "Get firmware options",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/setFirmwareConfig": {
+      "post": {
+        "summary": "Set firmware config",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "mirror": {
+                    "type": "string"
+                  },
+                  "flavour": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "subscription": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/info": {
+      "get": {
+        "summary": "Get info",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/status": {
+      "get": {
+        "summary": "Get status",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/health": {
+      "post": {
+        "summary": "Check health",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/audit": {
+      "post": {
+        "summary": "Run audit",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/upgrade": {
+      "post": {
+        "summary": "Upgrade firmware",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "upgrade": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/upgradestatus": {
+      "get": {
+        "summary": "Get upgrade status",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/changelog/{version}": {
+      "post": {
+        "summary": "Get firmware changelog",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/install/{pkg_name}": {
+      "post": {
+        "summary": "Install package",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/reinstall/{pkg_name}": {
+      "post": {
+        "summary": "Reinstall package",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/installConfiguredPlugins": {
+      "post": {
+        "summary": "Install missing configured plugins",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/acceptConfiguredPlugins": {
+      "post": {
+        "summary": "Accept configured plugins",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/firmware/remove/{pkg_name}": {
+      "post": {
+        "summary": "Remove package",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/lock/{pkg_name}": {
+      "post": {
+        "summary": "Lock package",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/unlock/{pkg_name}": {
+      "post": {
+        "summary": "Unlock package",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/details/{pkg_name}": {
+      "post": {
+        "summary": "Get package details",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/firmware/license/{pkg_name}": {
+      "post": {
+        "summary": "Get package license",
+        "tags": [
+          "core/firmware"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "pkg_name",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/core/menu/search": {
+      "get": {
+        "summary": "Search menu",
+        "tags": [
+          "core/menu"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/core/menu/tree": {
+      "get": {
+        "summary": "Menu tree",
+        "tags": [
+          "core/menu"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "query",
+            "name": "uri",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/core/system/halt": {
+      "get": {
+        "summary": "Halt system",
+        "tags": [
+          "core/system"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/core/system/reboot": {
+      "get": {
+        "summary": "Reboot system",
+        "tags": [
+          "core/system"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/cron/service/reconfigure": {
+      "post": {
+        "summary": "Reconfigure service",
+        "tags": [
+          "cron/service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/cron/settings/addJob": {
+      "post": {
+        "summary": "Add job",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/cron/settings/delJob/{uuid}": {
+      "post": {
+        "summary": "Delete job",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/cron/settings/getJob/{uuid}": {
+      "get": {
+        "summary": "Get job",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/cron/settings/searchJobs": {
+      "get": {
+        "summary": "Search jobs",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/cron/settings/setJob/{uuid}": {
+      "post": {
+        "summary": "Set job",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "job": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "job"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cron/settings/toggleJob/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle job",
+        "tags": [
+          "cron/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/diagnostics/activity/getActivity": {
+      "get": {
+        "summary": "Get activity",
+        "tags": [
+          "diagnostics/activity"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/dns/reverse_lookup": {
+      "get": {
+        "summary": "Reverse lookup",
+        "tags": [
+          "diagnostics/dns"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "address"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/firewall/log": {
+      "get": {
+        "summary": "Get log",
+        "tags": [
+          "diagnostics/firewall"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "digest": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/firewall/log_filters": {
+      "get": {
+        "summary": "Get log filters",
+        "tags": [
+          "diagnostics/firewall"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/firewall/stats": {
+      "get": {
+        "summary": "Get stats",
+        "tags": [
+          "diagnostics/firewall"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "group_by": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/delRoute": {
+      "post": {
+        "summary": "Delete route",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "destination": {
+                    "type": "string"
+                  },
+                  "gateway": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/flushArp": {
+      "post": {
+        "summary": "Flush arp table",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getArp": {
+      "get": {
+        "summary": "Get arp table",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getBpfStatistics": {
+      "get": {
+        "summary": "Get bpf statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getInterfaceNames": {
+      "get": {
+        "summary": "Get interface names",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getInterfaceStatistics": {
+      "get": {
+        "summary": "Get interface statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getMemoryStatistics": {
+      "get": {
+        "summary": "Get memory statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getNdp": {
+      "get": {
+        "summary": "Get ndp table",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getNetisrStatistics": {
+      "get": {
+        "summary": "Get netisr statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getProtocolStatistics": {
+      "get": {
+        "summary": "Get protocol statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getRoutes": {
+      "get": {
+        "summary": "Get routes",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/interface/getSocketStatistics": {
+      "get": {
+        "summary": "Get socket statistics",
+        "tags": [
+          "diagnostics/interface"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/cacheStats": {
+      "get": {
+        "summary": "Get cache stats",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/getconfig": {
+      "get": {
+        "summary": "Get config",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/isEnabled": {
+      "get": {
+        "summary": "Check enabled",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/reconfigure": {
+      "get": {
+        "summary": "Reconfigure",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/setconfig": {
+      "get": {
+        "summary": "Set config",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/netflow/status": {
+      "get": {
+        "summary": "Get status",
+        "tags": [
+          "diagnostics/netflow"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/networkinsight/getInterfaces": {
+      "get": {
+        "summary": "Get interfaces",
+        "tags": [
+          "diagnostics/networkinsight"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/networkinsight/getMetadata": {
+      "get": {
+        "summary": "Get metadata",
+        "tags": [
+          "diagnostics/networkinsight"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/networkinsight/getProtocols": {
+      "get": {
+        "summary": "Get protocols",
+        "tags": [
+          "diagnostics/networkinsight"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/networkinsight/getServices": {
+      "get": {
+        "summary": "Get services",
+        "tags": [
+          "diagnostics/networkinsight"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/systemhealth/getInterfaces": {
+      "get": {
+        "summary": "Get interfaces",
+        "tags": [
+          "diagnostics/systemhealth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/systemhealth/getRRDlist": {
+      "get": {
+        "summary": "Get RRD list",
+        "tags": [
+          "diagnostics/systemhealth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/traffic/Interface": {
+      "get": {
+        "summary": "Retrieve interface traffic stats",
+        "tags": [
+          "diagnostics/traffic"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/diagnostics/traffic/Top/{interfaces}": {
+      "get": {
+        "summary": "Retrieve interface top traffic hosts",
+        "tags": [
+          "diagnostics/traffic"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "interfaces",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias/addItem": {
+      "post": {
+        "summary": "Add item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "item": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/delItem/{uuid}": {
+      "post": {
+        "summary": "Delete item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias/export": {
+      "get": {
+        "summary": "Export aliases",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/getAliasUUID": {
+      "get": {
+        "summary": "Get alias UUID",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/getGeoIP": {
+      "get": {
+        "summary": "Get Geo IP",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/getItem/{uuid}": {
+      "get": {
+        "summary": "Get item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias/import": {
+      "post": {
+        "summary": "Import aliases",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "data"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/listCountries": {
+      "get": {
+        "summary": "List countries",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/listNetworkAliases": {
+      "get": {
+        "summary": "List network aliases",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/reconfigure": {
+      "post": {
+        "summary": "Reconfigure",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/searchItem": {
+      "get": {
+        "summary": "Search item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/setItem/{uuid}": {
+      "post": {
+        "summary": "Set item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias/toggleItem/{uuid}/{enabled}": {
+      "post": {
+        "summary": "Toggle item",
+        "tags": [
+          "firewall/alias"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "enabled",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/firewall/alias_util/add/{alias}": {
+      "post": {
+        "summary": "Add alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "address"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/aliases": {
+      "get": {
+        "summary": "Get aliases",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/delete/{alias}": {
+      "post": {
+        "summary": "Delete alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "address"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/find_references": {
+      "post": {
+        "summary": "Find references",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ip": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/flush/{alias}": {
+      "post": {
+        "summary": "Flush alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias_util/list/{alias}": {
+      "get": {
+        "summary": "List alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias_util/update_bogons": {
+      "get": {
+        "summary": "Update bogons",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/ids/settings/searchInstalledRules": {
+      "post": {
+        "summary": "Search installed ids rules",
+        "tags": [
+          "ids/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "searchPhrase": {
+                    "type": "string"
+                  },
+                  "sort": {
+                    "type": "string",
+                    "enum": [
+                      "asc",
+                      "desc"
+                    ]
+                  },
+                  "rowCount": {
+                    "type": "integer"
+                  },
+                  "current": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ids/settings/getRuleInfo/{uuid}": {
+      "post": {
+        "summary": "Get ids rule informations",
+        "tags": [
+          "ids/settings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/wol/wol/searchHost": {
+      "get": {
+        "summary": "Search hosts",
+        "tags": [
+          "wol/wol"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/wol/wol/set": {
+      "post": {
+        "summary": "Wake device by UUID",
+        "tags": [
+          "wol/wol"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "uuid"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
