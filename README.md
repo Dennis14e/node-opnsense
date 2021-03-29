@@ -1,7 +1,8 @@
 # Node OPNsense Client API (node-opnsense)
 
 [![npm version](https://badge.fury.io/js/%40dennis14e%2Fnode-opnsense.svg)](https://www.npmjs.com/package/@dennis14e/node-opnsense)
-![Push events](https://github.com/Dennis14e/node-opnsense/workflows/Push%20events/badge.svg)
+![Documentation](https://github.com/Dennis14e/node-opnsense/workflows/Documentation/badge.svg)
+![Lint](https://github.com/Dennis14e/node-opnsense/workflows/Lint/badge.svg)
 
 This Node Client API is mostly based on the documentation [here](https://docs.opnsense.org/development/api.html) and the source code [here](https://github.com/opnsense/core/tree/master/src/opnsense/mvc/app/controllers/OPNsense).
 However, it is known that the documentation is not always up to date.
