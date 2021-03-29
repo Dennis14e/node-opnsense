@@ -34,7 +34,4 @@ jobs:
         run: npm ci
 
       - name: Run lint
-        uses: bradennapier/eslint-plus-action@v3
-        with:
-          issueSummaryOnlyOnEvent: true
-          includeGlob: 'src/**/*'
+        run: npm run lint
