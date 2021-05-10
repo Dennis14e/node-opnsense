@@ -4,10 +4,10 @@
   "description": "Node OPNsense API",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "documentation build ./src/index.js -f html --github -o ./docs",
     "lint": "eslint ./src",
-    "jsdoc": "jsdoc -d ./docs -r ./src",
-    "openapi": "swagger-jsdoc -d ./openapi/specification.js -o ./openapi/openapi.json ./src/**/*.js"
+    "openapi": "swagger-jsdoc -d ./openapi/specification.js -o ./openapi/openapi.json ./src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,9 @@
     "axios": "^0.21.1"
   },
   "devDependencies": {
+    "documentation": "^13.2.5",
     "eslint": "^7.26.0",
     "eslint-plugin-jsdoc": "^33.1.1",
-    "jsdoc": "^3.6.6",
     "swagger-jsdoc": "^6.1.0"
   }
 }
