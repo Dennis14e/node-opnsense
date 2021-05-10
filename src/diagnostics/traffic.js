@@ -60,7 +60,7 @@ class TrafficClient extends BaseClient {
     /**
      * Retrieve interface top traffic hosts
      *
-     * @param   {array}   interfaces Interfaces
+     * @param   {Array}   interfaces Interfaces
      * @returns {Promise}            Request promise
      */
     async Top (interfaces) {
