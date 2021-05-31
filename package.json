@@ -29,7 +29,7 @@
   "devDependencies": {
     "documentation": "^13.2.5",
     "eslint": "^7.27.0",
-    "eslint-plugin-jsdoc": "^34.8.2",
+    "eslint-plugin-jsdoc": "^35.1.0",
     "swagger-jsdoc": "^6.1.0"
   }
 }
