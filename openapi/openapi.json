@@ -2158,6 +2158,206 @@
         ]
       }
     },
+    "/firewall/alias_util/add/{alias}": {
+      "post": {
+        "summary": "Add alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "address"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/aliases": {
+      "get": {
+        "summary": "Get aliases",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/delete/{alias}": {
+      "post": {
+        "summary": "Delete alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "address"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/find_references": {
+      "post": {
+        "summary": "Find references",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ip": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/firewall/alias_util/flush/{alias}": {
+      "post": {
+        "summary": "Flush alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias_util/list/{alias}": {
+      "get": {
+        "summary": "List alias",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "alias",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ]
+      }
+    },
+    "/firewall/alias_util/update_bogons": {
+      "get": {
+        "summary": "Update bogons",
+        "tags": [
+          "firewall/alias_util"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/firewall/alias/addItem": {
       "post": {
         "summary": "Add item",
@@ -2493,206 +2693,6 @@
             }
           }
         ]
-      }
-    },
-    "/firewall/alias_util/add/{alias}": {
-      "post": {
-        "summary": "Add alias",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "alias",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "address": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "address"
-                ]
-              }
-            }
-          }
-        }
-      }
-    },
-    "/firewall/alias_util/aliases": {
-      "get": {
-        "summary": "Get aliases",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
-      }
-    },
-    "/firewall/alias_util/delete/{alias}": {
-      "post": {
-        "summary": "Delete alias",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "alias",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "address": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "address"
-                ]
-              }
-            }
-          }
-        }
-      }
-    },
-    "/firewall/alias_util/find_references": {
-      "post": {
-        "summary": "Find references",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "x-www-form-urlencoded": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "ip": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/firewall/alias_util/flush/{alias}": {
-      "post": {
-        "summary": "Flush alias",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "alias",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ]
-      }
-    },
-    "/firewall/alias_util/list/{alias}": {
-      "get": {
-        "summary": "List alias",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        },
-        "parameters": [
-          {
-            "in": "path",
-            "name": "alias",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ]
-      }
-    },
-    "/firewall/alias_util/update_bogons": {
-      "get": {
-        "summary": "Update bogons",
-        "tags": [
-          "firewall/alias_util"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {}
-            }
-          }
-        }
       }
     },
     "/ids/settings/searchInstalledRules": {
