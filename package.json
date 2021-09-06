@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Dennis14e/node-opnsense#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.3"
   },
   "devDependencies": {
     "documentation": "^13.2.5",
