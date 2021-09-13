@@ -31,6 +31,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: GitHub release
-        uses: ncipollo/release-action@v1.8.8
+        uses: ncipollo/release-action@v1.8.9
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
