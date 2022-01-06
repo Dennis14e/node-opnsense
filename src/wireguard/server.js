@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * WG server
+ * Wireguard Server
  *
  * @module OPNsense/WireGuard/Server
  */
@@ -33,13 +33,13 @@ class WireguardServer extends BaseClient {
      * @returns {Promise} Request promise
      */
     async get () {
-	    return this.client.get('/wireguard/server/get');
+        return this.client.get('/wireguard/server/get');
     }
 
     /**
      * @openapi
      *
-     * /wireguard/server/setServer
+     * /wireguard/server/setServer:
      *   post:
      *     summary: create or modify wg server
      *     tags:
@@ -54,10 +54,12 @@ class WireguardServer extends BaseClient {
     /**
      * Create or update server
      *
-     * @returns {Promise} Request promise
+     * @param   {string}  uuid      Server UUID
+     * @param   {object}  post_data Server data
+     * @returns {Promise}           Request promise
      */
-    async setServer (id, post_data) {
-        return this.client.post(`/wireguard/server/setServer/${id}`, post_data);
+    async setServer (uuid, post_data) {
+        return this.client.post('/wireguard/server/setServer/' + uuid, post_data);
     }
 }
 

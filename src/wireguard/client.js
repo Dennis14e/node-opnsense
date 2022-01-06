@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * WG client
+ * Wireguard Client
  *
  * @module OPNsense/WireGuard/Client
  */
@@ -33,13 +33,13 @@ class WireguardClient extends BaseClient {
      * @returns {Promise} Request promise
      */
     async get () {
-	return this.client.get('/wireguard/client/get');
+        return this.client.get('/wireguard/client/get');
     }
 
     /**
      * @openapi
      *
-     * /wireguard/client/addClient
+     * /wireguard/client/addClient:
      *   post:
      *     summary: create new endpoint client
      *     tags:
@@ -54,15 +54,18 @@ class WireguardClient extends BaseClient {
     /**
      * Create client
      *
-     * @returns {Promise} Request promise
+     * @param   {string}  name          Client name
+     * @param   {string}  tunneladdress Client tunnel address
+     * @param   {string}  pubkey        Client public key
+     * @returns {Promise}               Request promise
      */
     async addClient (name, tunneladdress, pubkey) {
         const data = {
-	    client: {
-      		name,
-      		pubkey,
-      		tunneladdress
-	    }
+            client: {
+                name,
+                pubkey,
+                tunneladdress
+            }
         };
         return this.client.post('/wireguard/client/addClient', data);
     }

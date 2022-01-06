@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "OPNsense",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "OPNsense API"
   },
   "servers": [
@@ -2762,6 +2762,70 @@
             "required": true
           }
         ]
+      }
+    },
+    "/wireguard/client/get": {
+      "get": {
+        "summary": "get clients",
+        "tags": [
+          "wireguard/client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/wireguard/client/addClient": {
+      "post": {
+        "summary": "create new endpoint client",
+        "tags": [
+          "wireguard/client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/wireguard/server/get": {
+      "get": {
+        "summary": "get servers",
+        "tags": [
+          "wireguard/servers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/wireguard/server/setServer": {
+      "post": {
+        "summary": "create or modify wg server",
+        "tags": [
+          "wireguard/server"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
       }
     },
     "/wol/wol/searchHost": {
