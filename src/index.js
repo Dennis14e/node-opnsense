@@ -8,5 +8,6 @@ module.exports = {
     Diagnostics: require('./diagnostics/_index'),
     Firewall: require('./firewall/_index'),
     IDS: require('./ids/_index'),
+    Wireguard: require('./wireguard/_index'),
     Wol: require('./wol/_index'),
 };
