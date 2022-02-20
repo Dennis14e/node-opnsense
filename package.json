@@ -28,5 +28,8 @@
     "eslint-plugin-jsdoc": "^37.9.4",
     "jsdoc": "^3.6.10",
     "swagger-jsdoc": "^6.1.0"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
