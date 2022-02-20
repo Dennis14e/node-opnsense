@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@dennis14e/node-opnsense)](https://www.npmjs.com/package/@dennis14e/node-opnsense)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@dennis14e/node-opnsense)](https://www.npmjs.com/package/@dennis14e/node-opnsense)
 [![Build](https://github.com/Dennis14e/node-opnsense/actions/workflows/build.yml/badge.svg)](https://github.com/Dennis14e/node-opnsense/actions/workflows/build.yml)
+[![CodeQL](https://github.com/Dennis14e/node-opnsense/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Dennis14e/node-opnsense/actions/workflows/codeql-analysis.yml)
 
 This Node Client API is mostly based on the documentation [here](https://docs.opnsense.org/development/api.html) and the source code [here](https://github.com/opnsense/core/tree/master/src/opnsense/mvc/app/controllers/OPNsense).
 However, it is known that the documentation is not always up to date.
