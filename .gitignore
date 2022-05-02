@@ -104,5 +104,6 @@ dist
 .tern-port
 
 # JSDoc
-docs/
-test.js
+/docs/
+/test.js
+/test.ts

@@ -4,10 +4,11 @@
   "description": "Node OPNsense API",
   "main": "src/index.js",
   "scripts": {
+    "build": "tsc --build",
     "jsdoc": "jsdoc ./src -d ./docs",
     "lint": "eslint ./src",
     "openapi": "swagger-jsdoc -d ./openapi/specification.js -o ./openapi/openapi.json ./src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node ./test.ts"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,15 @@
   },
   "homepage": "https://github.com/Dennis14e/node-opnsense#readme",
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "eslint-plugin-jsdoc": "^39.2.9",
-    "jsdoc": "^3.6.10",
-    "swagger-jsdoc": "^6.2.1"
+    "@types/node": "~16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "~8.14.0",
+    "eslint-plugin-jsdoc": "~39.2.9",
+    "jsdoc": "~3.6.10",
+    "swagger-jsdoc": "~6.2.1",
+    "ts-node": "~10.7.0",
+    "typescript": "~4.6.4"
   },
   "engines": {
     "node": ">=12"
