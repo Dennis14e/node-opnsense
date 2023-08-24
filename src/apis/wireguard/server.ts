@@ -58,7 +58,7 @@ export class ServerClient extends BaseClient {
      * @param   {object}  post_data Server data
      * @returns {Promise}           Request promise
      */
-    async setServer (uuid, post_data) {
+    async setServer (uuid: string, post_data: object) {
         return this.httpClient.post('/wireguard/server/setServer/' + uuid, post_data);
     }
 }

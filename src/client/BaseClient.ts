@@ -1,20 +1,19 @@
 'use strict';
 
+import { OPNsenseAPIClient } from '../OPNsenseAPIClient';
 import { HttpClient } from './HttpClient';
 
 /**
- * BaseClient
+ * OPNsense/BaseClient
  *
  * @module OPNsense/BaseClient
  */
-export class BaseClient {
+class BaseClient {
     httpClient: HttpClient;
 
-    /**
-     *
-     * @param {OPNsense.Client} httpClient HttpClient class
-     */
-    constructor (httpClient: HttpClient) {
-        this.httpClient = httpClient;
+    constructor (opnsenseClient: OPNsenseAPIClient) {
+        this.httpClient = opnsenseClient.httpClient;
     }
 }
+
+export { BaseClient };
