@@ -25,7 +25,7 @@
   "homepage": "https://github.com/Dennis14e/node-opnsense#readme",
   "devDependencies": {
     "eslint": "^9.15.0",
-    "eslint-plugin-jsdoc": "^50.5.0",
+    "eslint-plugin-jsdoc": "^50.6.0",
     "jsdoc": "^4.0.4",
     "swagger-jsdoc": "^6.2.8"
   },
